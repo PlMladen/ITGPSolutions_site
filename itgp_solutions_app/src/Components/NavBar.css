@@ -1,0 +1,23 @@
+.navbar-brand {
+    float:left;
+    height: 144;
+}
+
+.custom-nav-bar {
+    margin-left: 50px;
+}
+
+.custom-nav-bar-butt {
+    margin-left: 50px;
+    font-weight: bold;
+    height: px;
+}
+
+.custom-nav-bar-butt:hover {
+    background-color: antiquewhite;
+}
+
+.languages-nav-bar {
+    position: relative;
+    right: 0;
+}
