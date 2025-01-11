@@ -1,6 +1,125 @@
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #c8c8cf;
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+    padding-top: 20px;
+}
+
+.off-canvas-menu.open {
+    left: 0;
+}
+
+.off-canvas-menu .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.off-canvas-menu .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.off-canvas-menu .navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;  /* Poravnaj stavke menija u sredinu */
+}
+
+.off-canvas-menu .nav-item {
+    padding: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.off-canvas-menu .nav-item:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Dugme za zatvaranje menija */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 10000; /* Osiguraj da dugme bude iznad menija */
+}
+
+/* Poravnanje loga i dugmeta za zatvaranje */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #c8c8cf; /* Dodaj boju pozadine koja je u skladu sa navbarom */
+    z-index: 1000; /* Uverite se da je header iznad menija */
+}
+
+/* Logo koji ne treba da se pomera */
+.menu-logo {
+    max-width: 100%;
+    margin-left: 20px;
+}
+
+/* Prilagođavanje za jezičke opcije (ne prekrivaju više dugme Kontakt) */
+.languages-nav-bar {
+    position: relative;
+    right: 0;
+}
+
+.languages-nav-bar .nav-item {
+    margin-bottom: 10px;
+}
+
+/* Prilagodba za veće ekrane */
+@media (min-width: 992px) {
+    .off-canvas-menu {
+        display: none;
+    }
+
+    .languages-nav-bar.d-none {
+        display: none;
+    }
+
+    .languages-nav-bar.d-md-flex {
+        display: flex;
+    }
+}
+
+/* Sakrivanje off-canvas menija na velikim ekranima */
+@media (min-width: 992px) {
+    .off-canvas-menu {
+        display: none; /* Sakrij off-canvas meni */
+    }
+
+    .navbar-toggler {
+        display: none; /* Sakrij dugme za padajući meni */
+    }
+}
+
 .navbar-brand {
     float:left;
     height: 144;
+}
+
+.container-fluid {
+    max-width: 1800px;
 }
 
 .custom-nav-bar {
@@ -10,14 +129,8 @@
 .custom-nav-bar-butt {
     margin-left: 50px;
     font-weight: bold;
-    height: px;
 }
 
 .custom-nav-bar-butt:hover {
-    background-color: antiquewhite;
-}
-
-.languages-nav-bar {
-    position: relative;
-    right: 0;
+    color: antiquewhite;
 }

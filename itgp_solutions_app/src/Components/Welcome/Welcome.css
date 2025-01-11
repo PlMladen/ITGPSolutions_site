@@ -1,0 +1,103 @@
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.black-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+}
+
+.background-active .black-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text-background {
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    line-height: 1.5em;
+    opacity: 0.5;
+    white-space: pre-wrap;
+    pointer-events: none;
+    animation: scrollBackground 10s linear infinite;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.text-background.animate {
+    opacity: 0.1;
+}
+
+@keyframes scrollBackground {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.svg-content {
+    width: 90%;
+    height: auto;
+    z-index: 3;
+}
+
+@media screen and (max-width: 1024px) {
+    .welcome-container {
+        height: 40vh;
+    }
+
+    .text-background {
+        font-size: 16px;
+    }
+
+    .svg-content {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-container {
+        height: 40vh;
+    }
+
+    .text-background {
+        font-size: 14px;
+    }
+
+    .svg-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-background {
+        font-size: 12px;
+    }
+
+    .svg-content {
+        width: 95%;
+    }
+}
