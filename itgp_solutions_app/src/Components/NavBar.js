@@ -14,15 +14,12 @@ function NavBar() {
 
     return (
         <div>
-            {/* Navbar for large screens */}
             <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-flex" style={{ backgroundColor: '#c8c8cf' }}>
                 <div className="container-fluid">
-                    {/* Logo */}
                     <a className="navbar-brand" href="#">
                         <img src={logo} alt="company-logo" width="200" />
                     </a>
 
-                    {/* Navigation Links */}
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {language === "serbian" ? (
                             <>
@@ -72,7 +69,6 @@ function NavBar() {
                         )}
                     </ul>
 
-                    {/* Language Options */}
                     <ul className="navbar-nav ms-auto languages-nav-bar">
                         <li className="nav-item" onClick={() => setLanguage("serbian")}>
                             <a className="nav-link" href="#">
@@ -93,7 +89,6 @@ function NavBar() {
                 </div>
             </nav>
 
-            {/* Off-canvas menu for small screens */}
             <nav className="navbar navbar-light d-lg-none" style={{ backgroundColor: '#c8c8cf' }}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">

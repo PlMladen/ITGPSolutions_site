@@ -31,7 +31,7 @@
 .off-canvas-menu .navbar-nav {
     list-style-type: none;
     padding: 0;
-    text-align: center;  /* Poravnaj stavke menija u sredinu */
+    text-align: center;
 }
 
 .off-canvas-menu .nav-item {
@@ -45,7 +45,6 @@
     color: black;
 }
 
-/* Dugme za zatvaranje menija */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -55,10 +54,9 @@
     border: none;
     color: black;
     cursor: pointer;
-    z-index: 10000; /* Osiguraj da dugme bude iznad menija */
+    z-index: 10000; 
 }
 
-/* Poravnanje loga i dugmeta za zatvaranje */
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -67,17 +65,15 @@
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: #c8c8cf; /* Dodaj boju pozadine koja je u skladu sa navbarom */
-    z-index: 1000; /* Uverite se da je header iznad menija */
+    background-color: #c8c8cf;
+    z-index: 1000;
 }
 
-/* Logo koji ne treba da se pomera */
 .menu-logo {
     max-width: 100%;
     margin-left: 20px;
 }
 
-/* Prilagođavanje za jezičke opcije (ne prekrivaju više dugme Kontakt) */
 .languages-nav-bar {
     position: relative;
     right: 0;
@@ -87,7 +83,6 @@
     margin-bottom: 10px;
 }
 
-/* Prilagodba za veće ekrane */
 @media (min-width: 992px) {
     .off-canvas-menu {
         display: none;
@@ -102,14 +97,13 @@
     }
 }
 
-/* Sakrivanje off-canvas menija na velikim ekranima */
 @media (min-width: 992px) {
     .off-canvas-menu {
-        display: none; /* Sakrij off-canvas meni */
+        display: none;
     }
 
     .navbar-toggler {
-        display: none; /* Sakrij dugme za padajući meni */
+        display: none;
     }
 }
 

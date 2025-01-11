@@ -1,33 +1,45 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import './Welcome.css';
+import { LanguageContext } from '../LanguageContext';
 
 export default function Welcome() {
-    const slogan = "> Budućnost počinje inovacijama - KRENIMO ZAJEDNO!";
+    let language = useContext(LanguageContext)['language'];
+    var slogan = "";
+    if (language === "serbian") {
+        slogan = "> Budućnost počinje inovacijama - KRENIMO ZAJEDNO!";
+    } else if (language === "english") {
+        slogan = "> The future begins with innovation - LET'S START TOGETHER!";
+    } else if (language === "german") {
+        slogan = "> Die Zukunft beginnt mit Innovation - LASS UNS GEMEINSAM STARTEN!";
+    } else {
+        slogan = "> Default slogan - UNKNOWN LANGUAGE!";
+    }
     const [visibleText, setVisibleText] = useState("");
     const [cursorPosition, setCursorPosition] = useState(75);
+    const [fontSize, setFontSize] = useState(50);
     const [isCursorVisible, setIsCursorVisible] = useState(false);
     const [isTypingCompleted, setIsTypingCompleted] = useState(false);
     const [isBackgroundActive, setIsBackgroundActive] = useState(false);
     const textRef = useRef(null);
 
     const backgroundCodeLines = [
-        "random.seed(42); // #######################################",
-        "const data = fetch('/api/data'); // #######################",
-        "console.log('#################...'); // ####################",
+        "random.seed(42); // #####################################################",
+        "const data = fetch('/api/data'); // #####################################",
+        "console.log('#################...'); // ##################################",
         "for (let i = 0; i < 100; i++) {",
         "    processData(i);",
         "    setTimeout(() => {",
-        "        console.log(`O############################# #${i}...`);",
+        "        console.log(`O########################################### #${i}...`);",
         "    }, Math.random() * 1000);",
         "}",
         "setInterval(() => {",
-        "    alert('###############################################!');",
+        "    alert('#############################################################!');",
         "}, 5000);",
-        "let systemStatus = 'ACTIVE'; // ##############################",
+        "let systemStatus = 'ACTIVE'; // ############################################",
         "if (systemStatus === 'ACTIVE') {",
         "    initiateProcess();",
         "} else {",
-        "    alert('##################################################!');",
+        "    alert('################################################################!');",
         "}",
     ];
 
@@ -43,14 +55,15 @@ export default function Welcome() {
                     }
                     return prevPosition;
                 });
+                adjustFontSize();
                 index++;
             } else {
                 clearInterval(typingInterval);
-                setIsTypingCompleted(true); 
+                setIsTypingCompleted(true);
                 setTimeout(() => setIsBackgroundActive(true), 3000);
             }
         }, 60);
-
+    
         return () => clearInterval(typingInterval);
     }, [slogan]);
 
@@ -72,6 +85,15 @@ export default function Welcome() {
                 {line}
             </div>
         ));
+    };
+
+    const adjustFontSize = () => {
+        if (textRef.current) {
+            const textWidth = textRef.current.getComputedTextLength();
+            if (textWidth > 1500) {
+                setFontSize((prevSize) => prevSize - 5);
+            }
+        }
     };
 
     return (
@@ -99,7 +121,7 @@ export default function Welcome() {
                     ref={textRef}
                     x="50"
                     y="150"
-                    fontSize="50"
+                    fontSize={fontSize}
                     fontFamily="'Courier New', Courier, monospace"
                     fill="#214be4"
                     textAnchor="start"
