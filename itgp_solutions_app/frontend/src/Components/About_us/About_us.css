@@ -1,0 +1,50 @@
+.about-us-container {
+    width: 100%;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-content {
+    max-width: 1200px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+    .about-us-title {
+        font-size: 2rem;
+    }
+
+    .about-us-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-title {
+        font-size: 1.8rem;
+    }
+
+    .about-us-text {
+        font-size: 0.9rem;
+    }
+}
