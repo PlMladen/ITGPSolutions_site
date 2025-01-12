@@ -44,6 +44,12 @@ export default function Welcome() {
     ];
 
     useEffect(() => {
+        setVisibleText("");
+        setCursorPosition(75);
+        setFontSize(50);
+        setIsCursorVisible(false);
+        setIsTypingCompleted(false);
+    
         let index = 0;
         const typingInterval = setInterval(() => {
             if (index < slogan.length) {
@@ -65,7 +71,7 @@ export default function Welcome() {
         }, 60);
     
         return () => clearInterval(typingInterval);
-    }, [slogan]);
+    }, [slogan, language]);
 
     useEffect(() => {
         let cursorBlinkInterval;
