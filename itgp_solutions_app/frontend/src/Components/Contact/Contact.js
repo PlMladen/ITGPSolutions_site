@@ -68,6 +68,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="firstName"
                                     name="firstName"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
                                     placeholder="Unesite Vaše ime"
                                     required
                                 />
@@ -80,6 +82,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="lastName"
                                     name="lastName"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
                                     placeholder="Unesite Vaše prezime"
                                     required
                                 />
@@ -92,6 +96,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="email"
                                     name="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Unesite Vaš E-mail"
                                     required
                                 />
@@ -104,6 +110,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="phone"
                                     name="phone"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
                                     placeholder="Unesite Vaš kontakt telefon"
                                 />
                             </div>
@@ -115,6 +123,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="company"
                                     name="company"
+                                    value={company}
+                                    onChange={(e) => setCompany(e.target.value)}
                                     placeholder="Unesite ime firme"
                                 />
                             </div>
@@ -126,6 +136,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="city"
                                     name="city"
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
                                     placeholder="Unesite ime grada"
                                 />
                             </div>
@@ -136,6 +148,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="message"
                                     name="message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     rows="5"
                                     placeholder="Unesite Vašu poruku"
                                     required
@@ -170,6 +184,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="firstName"
                                     name="firstName"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
                                     placeholder="Enter your first name"
                                     required
                                 />
@@ -182,6 +198,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="lastName"
                                     name="lastName"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
                                     placeholder="Enter your last name"
                                     required
                                 />
@@ -194,6 +212,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="email"
                                     name="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter your E-mail"
                                     required
                                 />
@@ -206,6 +226,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="phone"
                                     name="phone"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
                                     placeholder="Enter your phone number"
                                 />
                             </div>
@@ -217,6 +239,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="company"
                                     name="company"
+                                    value={company}
+                                    onChange={(e) => setCompany(e.target.value)}
                                     placeholder="Enter your company name"
                                 />
                             </div>
@@ -228,6 +252,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="city"
                                     name="city"
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
                                     placeholder="Enter your city"
                                 />
                             </div>
@@ -238,6 +264,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="message"
                                     name="message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     rows="5"
                                     placeholder="Write your message"
                                     required
@@ -272,6 +300,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="firstName"
                                     name="firstName"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
                                     placeholder="Geben Sie Ihren Vornamen ein"
                                     required
                                 />
@@ -284,6 +314,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="lastName"
                                     name="lastName"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
                                     placeholder="Geben Sie Ihren Nachnamen ein"
                                     required
                                 />
@@ -296,6 +328,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="email"
                                     name="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Geben Sie Ihre E-Mail-Adresse ein"
                                     required
                                 />
@@ -308,6 +342,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="phone"
                                     name="phone"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
                                     placeholder="Geben Sie Ihre Telefonnummer ein"
                                 />
                             </div>
@@ -319,6 +355,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="company"
                                     name="company"
+                                    value={company}
+                                    onChange={(e) => setCompany(e.target.value)}
                                     placeholder="Geben Sie den Firmennamen ein"
                                 />
                             </div>
@@ -330,6 +368,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="city"
                                     name="city"
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
                                     placeholder="Geben Sie den Stadtnamen ein"
                                 />
                             </div>
@@ -340,6 +380,8 @@ export default function Contact() {
                                     className="form-control"
                                     id="message"
                                     name="message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     rows="5"
                                     placeholder="Geben Sie Ihre Nachricht ein"
                                     required

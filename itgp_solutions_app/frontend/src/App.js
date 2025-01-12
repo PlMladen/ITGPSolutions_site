@@ -12,6 +12,7 @@ import Services from './Components/Services/Services';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Procedure from './Components/Procedure/Procedure';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Welcome />
         <About_us />
         <Services />
+        <Procedure />
         <Contact />
         
         <Footer />

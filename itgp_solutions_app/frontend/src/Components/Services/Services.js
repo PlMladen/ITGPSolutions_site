@@ -130,11 +130,11 @@ const Services = () => {
   return (
     <section className="services-section py-5" id="services">
       <div className="container">
-        <h2 className="text-center mb-4" data-aos="fade-up">
-          Naše Usluge
+        <h2 className="text-center mb-4 custom-services-class" data-aos="fade-up">
+          {currentContent.title}
         </h2>
-        <p className="text-center text-muted mb-5" data-aos="fade-up">
-          Pružamo profesionalna softverska rešenja prilagođena vašim potrebama.
+        <p className="text-center custom-services-class mb-5" data-aos="fade-up">
+        {currentContent.description}
         </p>
         <div className="row g-4">
           {currentContent.services.map((service, index) => (

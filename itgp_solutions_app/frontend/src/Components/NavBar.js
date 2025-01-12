@@ -14,7 +14,7 @@ function NavBar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-flex fixed-top" style={{ backgroundColor: '#c8c8cf' }}>
+            <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-flex fixed-top custom-navbar-class" style={{ backgroundColor: '#c8c8cf'}}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <img src={logo} alt="company-logo" width="200" />
@@ -27,13 +27,16 @@ function NavBar() {
                                     <a className="nav-link active" aria-current="page" href="#">Početak</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">O nama</a>
+                                    <a className="nav-link active" aria-current="page" href="#about_us">O nama</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Usluge</a>
+                                    <a className="nav-link active" href="#services">Usluge</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Kontakt</a>
+                                    <a className="nav-link active" href="#procedure">Tok razvoja rešenja</a>
+                                </li>
+                                <li className="nav-item custom-nav-bar-butt">
+                                    <a className="nav-link active" href="#contact">Kontakt</a>
                                 </li>
                             </>
                         ) : language === "english" ? (
@@ -42,13 +45,16 @@ function NavBar() {
                                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">About Us</a>
+                                    <a className="nav-link active" aria-current="page" href="#about_us">About Us</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Services</a>
+                                    <a className="nav-link active" href="#services">Services</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Contact</a>
+                                    <a className="nav-link active" href="#procedure">Development Process</a>
+                                </li>
+                                <li className="nav-item custom-nav-bar-butt">
+                                    <a className="nav-link active" href="#contact">Contact</a>
                                 </li>
                             </>
                         ) : (
@@ -57,13 +63,16 @@ function NavBar() {
                                     <a className="nav-link active" aria-current="page" href="#">Startseite</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">Über Uns</a>
+                                    <a className="nav-link active" aria-current="page" href="#about_us">Über Uns</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Dienstleistungen</a>
+                                    <a className="nav-link active" href="#services">Dienstleistungen</a>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#">Kontakt</a>
+                                    <a className="nav-link active" href="#procedure">Entwicklungsprozess</a>
+                                </li>
+                                <li className="nav-item custom-nav-bar-butt">
+                                    <a className="nav-link active" href="#contact">Kontakt</a>
                                 </li>
                             </>
                         )}
@@ -108,24 +117,27 @@ function NavBar() {
                 <ul className="navbar-nav">
                     {language === "serbian" ? (
                         <>
-                            <li className="nav-item">Početak</li>
-                            <li className="nav-item">O nama</li>
-                            <li className="nav-item">Usluge</li>
-                            <li className="nav-item">Kontakt</li>
+                            <a className="nav-link" href="#"><li className="nav-item">Početak</li></a>
+                            <a className="nav-link" href="#about_us"><li className="nav-item">O nama</li></a>
+                            <a className="nav-link" href="#services"><li className="nav-item">Usluge</li></a>
+                            <a className="nav-link" href="#procedure"><li className="nav-item">Tok razvoja rešenja</li></a>
+                            <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
                         </>
                     ) : language === "english" ? (
                         <>
-                            <li className="nav-item">Home</li>
-                            <li className="nav-item">About Us</li>
-                            <li className="nav-item">Services</li>
-                            <li className="nav-item">Contact</li>
+                            <a className="nav-link" href="#"><li className="nav-item">Home</li></a>
+                            <a className="nav-link" href="#about_us"><li className="nav-item">About Us</li></a>
+                            <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
+                            <a className="nav-link" href="#procedure"><li className="nav-item">Development process</li></a>
+                            <a className="nav-link" href="#contact"><li className="nav-item">Contact</li></a>
                         </>
                     ) : (
                         <>
-                            <li className="nav-item">Startseite</li>
-                            <li className="nav-item">Über Uns</li>
-                            <li className="nav-item">Dienstleistungen</li>
-                            <li className="nav-item">Kontakt</li>
+                            <a className="nav-link" href="#"><li className="nav-item">Startseite</li></a>
+                            <a className="nav-link" href="#about_us"><li className="nav-item">Über Uns</li></a>
+                            <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
+                            <a className="nav-link" href="#procedure"><li className="nav-item">Entwicklungsprozess</li></a>
+                            <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
                         </>
                     )}
                 </ul>

@@ -6,19 +6,16 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-app.get('/', (req, res) => {
-    console.log('GET request to /');
-    res.send('Hello, World!');
-});
+
 app.post('/api/send-email', (req, res) => {
-    const { name, email, message } = req.body;
+    const { firstName, lastName, email, phone, company, city, message } = req.body;
     
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'itgpsolutions@gmail.com',
-            pass: 'MiSmoKraljevi13!',
+            pass: 'ytvt prfh rlrs dsbu',
         },
     });
 
@@ -26,12 +23,11 @@ app.post('/api/send-email', (req, res) => {
     const mailOptions = {
         from: email,
         to: 'itgpsolutions@gmail.com',
-        subject: `Message from ${name}`,
-        text: message,
+        subject: `Contactform data from ${firstName + " " + lastName + " " + company}`,
+        text: firstName + " " + lastName + "\nFirma: " + company + "\nCity: " + city + "\nPhone: " + phone + "\n\n" + message,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
-        console.log(email)
         if (error) {
             return res.status(500).json({ message: 'There was an error occurred during sending the E-mail.', error: error});
         }

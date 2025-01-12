@@ -10,6 +10,9 @@
     padding-top: 20px;
 }
 
+.custom-navbar-class{
+    border-bottom: 2px black solid;
+}
 .off-canvas-menu.open {
     left: 0;
 }

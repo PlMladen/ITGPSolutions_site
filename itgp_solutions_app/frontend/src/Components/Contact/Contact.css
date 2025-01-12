@@ -1,12 +1,13 @@
 .contact-section {
-    background-color: #c8c8cf;
+    background-color: #1e1e2f;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px 20px;
+    color: #214be4;
 }
 
 .contact-section h2 {
-    color: #343a40;
+    color: #214be4;
     font-weight: bold;
 }
 

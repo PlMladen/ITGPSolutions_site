@@ -1,0 +1,50 @@
+.procedure-container {
+  width: 100%;
+  background-color: #c8c8cf;
+  color: #000000;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.procedure-content {
+  max-width: 1200px;
+  text-align: justify;
+  padding: 20px;
+}
+
+.procedure-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.procedure-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .procedure-title {
+      font-size: 2rem;
+  }
+
+  .procedure-text {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .procedure-title {
+      font-size: 1.8rem;
+  }
+
+  .procedure-text {
+      font-size: 0.9rem;
+  }
+}
