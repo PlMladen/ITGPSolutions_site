@@ -1,0 +1,30 @@
+.services-section {
+    background-color: #1e1e2f;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    background-color: #e9f0ff;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border: none;
+    background-color: #c8c8cf;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .custom-services-class{
+    color: #214be4;
+  }
+  
+  
