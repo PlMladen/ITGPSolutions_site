@@ -27,7 +27,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>© 2025 ITGP Solutions. Sva prava zadržana.</p>
+                        <p>© 2024 ITGP Solutions. Sva prava zadržana.</p>
                         <div className="social-icons">
                             {/* <a href="#" title="Facebook"><img src={facebook_logo} alt="Facebook" /></a> */}
                             <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
