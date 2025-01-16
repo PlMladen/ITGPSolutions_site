@@ -79,18 +79,39 @@ function NavBar() {
                     </ul>
 
                     <ul className="navbar-nav ms-auto languages-nav-bar">
-                        <li className="nav-item" onClick={() => setLanguage("serbian")}>
-                            <a className="nav-link" href="#">
+                        <li className="nav-item">
+                            <a 
+                                className="nav-link" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("serbian"); 
+                                }}
+                            >
                                 <img src={flagSerbia} alt="serbian language" width="30" />
                             </a>
                         </li>
-                        <li className="nav-item" onClick={() => setLanguage("english")}>
-                            <a className="nav-link" href="#">
+                        <li className="nav-item">
+                            <a 
+                                className="nav-link" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("english"); 
+                                }}
+                            >
                                 <img src={flagEng} alt="english language" width="30" />
                             </a>
                         </li>
-                        <li className="nav-item" onClick={() => setLanguage("german")}>
-                            <a className="nav-link" href="#">
+                        <li className="nav-item">
+                        <a 
+                                className="nav-link" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("german"); 
+                                }}
+                            >
                                 <img src={flagGermany} alt="german language" width="30" />
                             </a>
                         </li>

@@ -15,7 +15,7 @@ function Footer() {
                 <div className="container">
                     <div className="footer-top">
                         <div className="footer-logo">
-                            <a href="#" className="logo">ITGP Solutions</a>
+                            <a href="#" className="logo glow-effect">ITGP Solutions</a>
                         </div>
                         <div className="footer-nav">
                             <ul>
