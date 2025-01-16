@@ -1,10 +1,10 @@
-import logo from './images/ITGP_final_logo.png';
-import flagSerbia from './images/srbija.png';
-import flagEng from './images/eng.png';
-import flagGermany from './images/de.png';
+import logo from '../images/ITGP_final_logo.png';
+import flagSerbia from '../images/srbija.png';
+import flagEng from '../images/eng.png';
+import flagGermany from '../images/de.png';
 import './NavBar.css';
 import { useContext, useState } from "react";
-import { LanguageContext } from './LanguageContext';
+import { LanguageContext } from '../LanguageContext';
 
 function NavBar() {
     const { language, setLanguage } = useContext(LanguageContext);

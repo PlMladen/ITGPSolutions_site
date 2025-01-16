@@ -1,9 +1,9 @@
 import './Footer.css';
-import facebook_logo from './images/facebook-icon.png';
-import linkedin_logo from './images/linkedin-icon.png';
-import instagram_logo from './images/instagram-icon.png';
+import facebook_logo from '../images/facebook-icon.png';
+import linkedin_logo from '../images/linkedin-icon.png';
+import instagram_logo from '../images/instagram-icon.png';
 import { useContext } from "react";
-import { LanguageContext } from './LanguageContext';
+import { LanguageContext } from '../LanguageContext';
 
 
 function Footer() {

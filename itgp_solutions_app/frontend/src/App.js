@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './Components/NavBar';
-import Footer from './Components/Footer';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
 import { useState, createContext, useContext } from "react";
 import { LanguageProvider } from './Components/LanguageContext';
 import Contact from './Components/Contact/Contact';
