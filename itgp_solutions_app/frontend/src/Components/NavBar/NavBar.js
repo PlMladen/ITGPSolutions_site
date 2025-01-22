@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from '../images/ITGP_final_logo.png';
 import flagSerbia from '../images/srbija.png';
 import flagEng from '../images/eng.png';
@@ -25,55 +26,55 @@ function NavBar() {
                         {language === "serbian" ? (
                             <>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">Početak</a>
+                                    <Link className="nav-link active" aria-current="page" to="/">Početak</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#about_us">O nama</a>
+                                    <Link className="nav-link active" to="/about_us">O nama</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#services">Usluge</a>
+                                    <Link className="nav-link active" to="/services">Usluge</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#procedure">Tok razvoja rešenja</a>
+                                    <Link className="nav-link active" to="/procedure">Tok razvoja rešenja</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#contact">Kontakt</a>
+                                    <Link className="nav-link active" to="/contact">Kontakt</Link>
                                 </li>
                             </>
                         ) : language === "english" ? (
                             <>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#about_us">About Us</a>
+                                    <Link className="nav-link active" to="/about_us">About Us</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#services">Services</a>
+                                    <Link className="nav-link active" to="/services">Services</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#procedure">Development Process</a>
+                                    <Link className="nav-link active" to="/procedure">Development Process</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#contact">Contact</a>
+                                    <Link className="nav-link active" to="/contact">Contact</Link>
                                 </li>
                             </>
                         ) : (
                             <>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#">Startseite</a>
+                                    <Link className="nav-link active" aria-current="page" to="/">Startseite</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" aria-current="page" href="#about_us">Über Uns</a>
+                                    <Link className="nav-link active" to="/about_us">Über Uns</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#services">Dienstleistungen</a>
+                                    <Link className="nav-link active" to="/services">Dienstleistungen</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#procedure">Entwicklungsprozess</a>
+                                    <Link className="nav-link active" to="/procedure">Entwicklungsprozess</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <a className="nav-link active" href="#contact">Kontakt</a>
+                                    <Link className="nav-link active" to="/contact">Kontakt</Link>
                                 </li>
                             </>
                         )}
@@ -105,7 +106,7 @@ function NavBar() {
                             </a>
                         </li>
                         <li className="nav-item">
-                        <a 
+                            <a 
                                 className="nav-link" 
                                 href="#"
                                 onClick={(e) => {
@@ -135,7 +136,7 @@ function NavBar() {
 
             <div 
                 className={`off-canvas-menu ${isMenuOpen ? 'open' : ''}`} 
-                onClick={closeMenu}
+                onClick={isMenuOpen ? closeMenu : null}
             >
                 <div className="menu-content" onClick={(e) => e.stopPropagation()}>
                     <div className="menu-header">
@@ -145,44 +146,30 @@ function NavBar() {
                     <ul className="navbar-nav">
                         {language === "serbian" ? (
                             <>
-                                <a className="nav-link" href="#"><li className="nav-item">Početak</li></a>
-                                <a className="nav-link" href="#about_us"><li className="nav-item">O nama</li></a>
-                                <a className="nav-link" href="#services"><li className="nav-item">Usluge</li></a>
-                                <a className="nav-link" href="#procedure"><li className="nav-item">Tok razvoja rešenja</li></a>
-                                <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
+                                <Link className="nav-link" to="/"><li className="nav-item">Početak</li></Link>
+                                <Link className="nav-link" to="/about_us"><li className="nav-item">O nama</li></Link>
+                                <Link className="nav-link" to="/services"><li className="nav-item">Usluge</li></Link>
+                                <Link className="nav-link" to="/procedure"><li className="nav-item">Tok razvoja rešenja</li></Link>
+                                <Link className="nav-link" to="/contact"><li className="nav-item">Kontakt</li></Link>
                             </>
                         ) : language === "english" ? (
                             <>
-                                <a className="nav-link" href="#"><li className="nav-item">Home</li></a>
-                                <a className="nav-link" href="#about_us"><li className="nav-item">About Us</li></a>
-                                <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
-                                <a className="nav-link" href="#procedure"><li className="nav-item">Development process</li></a>
-                                <a className="nav-link" href="#contact"><li className="nav-item">Contact</li></a>
+                                <Link className="nav-link" to="/"><li className="nav-item">Home</li></Link>
+                                <Link className="nav-link" to="/about_us"><li className="nav-item">About Us</li></Link>
+                                <Link className="nav-link" to="/services"><li className="nav-item">Services</li></Link>
+                                <Link className="nav-link" to="/procedure"><li className="nav-item">Development process</li></Link>
+                                <Link className="nav-link" to="/contact"><li className="nav-item">Contact</li></Link>
                             </>
                         ) : (
                             <>
-                                <a className="nav-link" href="#"><li className="nav-item">Startseite</li></a>
-                                <a className="nav-link" href="#about_us"><li className="nav-item">Über Uns</li></a>
-                                <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
-                                <a className="nav-link" href="#procedure"><li className="nav-item">Entwicklungsprozess</li></a>
-                                <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
+                                <Link className="nav-link" to="/"><li className="nav-item">Startseite</li></Link>
+                                <Link className="nav-link" to="/about_us"><li className="nav-item">Über Uns</li></Link>
+                                <Link className="nav-link" to="/services"><li className="nav-item">Dienstleistungen</li></Link>
+                                <Link className="nav-link" to="/procedure"><li className="nav-item">Entwicklungsprozess</li></Link>
+                                <Link className="nav-link" to="/contact"><li className="nav-item">Kontakt</li></Link>
                             </>
                         )}
                     </ul>
-
-                    <div className="languages-nav-bar">
-                        <ul className="navbar-nav">
-                            <li className="nav-item" onClick={() => setLanguage("serbian")}>
-                                <a className="nav-link"><img src={flagSerbia} alt="serbian language" width="30" /></a>
-                            </li>
-                            <li className="nav-item" onClick={() => setLanguage("english")}>
-                                <a className="nav-link"><img src={flagEng} alt="english language" width="30" /></a>
-                            </li>
-                            <li className="nav-item" onClick={() => setLanguage("german")}>
-                                <a className="nav-link"><img src={flagGermany} alt="german language" width="30" /></a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

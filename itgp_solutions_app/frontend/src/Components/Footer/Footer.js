@@ -58,7 +58,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className="footer-bottom">
-                            <p>© 2024 ITGP Solutions. All rights reserved.</p>
+                            <p>© 2025 ITGP Solutions. All rights reserved.</p>
                             <div className="social-icons">
                                 {/* <a href="#" title="Facebook"><img src={facebook_logo} alt="Facebook" /></a> */}
                                 <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
@@ -89,7 +89,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className="footer-bottom">
-                            <p>© 2024 ITGP Solutions. Alle Rechte vorbehalten.</p>
+                            <p>© 2025 ITGP Solutions. Alle Rechte vorbehalten.</p>
                             <div className="social-icons">
                                 {/* <a href="#" title="Facebook"><img src={facebook_logo} alt="Facebook" /></a> */}
                                 <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
