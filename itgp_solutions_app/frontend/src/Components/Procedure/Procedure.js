@@ -8,7 +8,6 @@ const Procedure = () => {
     const { language } = useContext(LanguageContext);
 
   useEffect(() => {
-    document.title = 'Tok razvoja aplikacije';
     const metaDescription = document.createElement('meta');
     metaDescription.name = 'description';
     metaDescription.content = 'Pratite tok razvoja aplikacije, od kontakta sa korisnikom do održavanja.';

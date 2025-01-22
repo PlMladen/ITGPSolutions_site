@@ -2,13 +2,16 @@
     position: fixed;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: 80%;
     height: 100%;
     background-color: #c8c8cf;
     transition: left 0.3s ease-in-out;
     z-index: 1050;
     padding-top: 20px;
+    overflow-y: auto;
 }
+
+
 
 .custom-navbar-class{
     border-bottom: 2px black solid;
@@ -22,12 +25,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border-bottom: 1px solid black;
+    height: 95px;
 }
 
 .off-canvas-menu .navbar-nav {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 78px 0;
     text-align: center;
 }
 
@@ -41,6 +46,7 @@
     padding: 20px;
     font-size: 24px;
     border-bottom: 1px solid #ddd;
+    height: 78px;
 }
 
 .off-canvas-menu .nav-item:hover {
@@ -112,7 +118,7 @@
 
 .navbar-brand {
     float:left;
-    height: 144;
+    height: 78px;
 }
 
 .container-fluid {

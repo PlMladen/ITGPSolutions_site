@@ -11,6 +11,7 @@ function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
         <div>
@@ -124,57 +125,64 @@ function NavBar() {
                     <a className="navbar-brand" href="#">
                         <img src={logo} alt="company-logo" width="200" />
                     </a>
-                    <button className="navbar-toggler" onClick={toggleMenu} aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                    {!isMenuOpen && (
+                        <button className="navbar-toggler" onClick={toggleMenu} aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                    )}
                 </div>
             </nav>
 
-            <div className={`off-canvas-menu ${isMenuOpen ? 'open' : ''}`}>
-                <div className="menu-header">
-                    <img src={logo} alt="company-logo" className="menu-logo" width="200" />
-                    <button className="close-btn" onClick={toggleMenu}>X</button>
-                </div>
-                <ul className="navbar-nav">
-                    {language === "serbian" ? (
-                        <>
-                            <a className="nav-link" href="#"><li className="nav-item">Početak</li></a>
-                            <a className="nav-link" href="#about_us"><li className="nav-item">O nama</li></a>
-                            <a className="nav-link" href="#services"><li className="nav-item">Usluge</li></a>
-                            <a className="nav-link" href="#procedure"><li className="nav-item">Tok razvoja rešenja</li></a>
-                            <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
-                        </>
-                    ) : language === "english" ? (
-                        <>
-                            <a className="nav-link" href="#"><li className="nav-item">Home</li></a>
-                            <a className="nav-link" href="#about_us"><li className="nav-item">About Us</li></a>
-                            <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
-                            <a className="nav-link" href="#procedure"><li className="nav-item">Development process</li></a>
-                            <a className="nav-link" href="#contact"><li className="nav-item">Contact</li></a>
-                        </>
-                    ) : (
-                        <>
-                            <a className="nav-link" href="#"><li className="nav-item">Startseite</li></a>
-                            <a className="nav-link" href="#about_us"><li className="nav-item">Über Uns</li></a>
-                            <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
-                            <a className="nav-link" href="#procedure"><li className="nav-item">Entwicklungsprozess</li></a>
-                            <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
-                        </>
-                    )}
-                </ul>
-
-                <div className="languages-nav-bar">
+            <div 
+                className={`off-canvas-menu ${isMenuOpen ? 'open' : ''}`} 
+                onClick={closeMenu}
+            >
+                <div className="menu-content" onClick={(e) => e.stopPropagation()}>
+                    <div className="menu-header">
+                        <img src={logo} alt="company-logo" className="menu-logo" width="200" />
+                        <button className="close-btn" onClick={closeMenu}>X</button>
+                    </div>
                     <ul className="navbar-nav">
-                        <li className="nav-item" onClick={() => setLanguage("serbian")}>
-                            <a className="nav-link"><img src={flagSerbia} alt="serbian language" width="30" /></a>
-                        </li>
-                        <li className="nav-item" onClick={() => setLanguage("english")}>
-                            <a className="nav-link"><img src={flagEng} alt="english language" width="30" /></a>
-                        </li>
-                        <li className="nav-item" onClick={() => setLanguage("german")}>
-                            <a className="nav-link"><img src={flagGermany} alt="german language" width="30" /></a>
-                        </li>
+                        {language === "serbian" ? (
+                            <>
+                                <a className="nav-link" href="#"><li className="nav-item">Početak</li></a>
+                                <a className="nav-link" href="#about_us"><li className="nav-item">O nama</li></a>
+                                <a className="nav-link" href="#services"><li className="nav-item">Usluge</li></a>
+                                <a className="nav-link" href="#procedure"><li className="nav-item">Tok razvoja rešenja</li></a>
+                                <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
+                            </>
+                        ) : language === "english" ? (
+                            <>
+                                <a className="nav-link" href="#"><li className="nav-item">Home</li></a>
+                                <a className="nav-link" href="#about_us"><li className="nav-item">About Us</li></a>
+                                <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
+                                <a className="nav-link" href="#procedure"><li className="nav-item">Development process</li></a>
+                                <a className="nav-link" href="#contact"><li className="nav-item">Contact</li></a>
+                            </>
+                        ) : (
+                            <>
+                                <a className="nav-link" href="#"><li className="nav-item">Startseite</li></a>
+                                <a className="nav-link" href="#about_us"><li className="nav-item">Über Uns</li></a>
+                                <a className="nav-link" href="#services"><li className="nav-item">Services</li></a>
+                                <a className="nav-link" href="#procedure"><li className="nav-item">Entwicklungsprozess</li></a>
+                                <a className="nav-link" href="#contact"><li className="nav-item">Kontakt</li></a>
+                            </>
+                        )}
                     </ul>
+
+                    <div className="languages-nav-bar">
+                        <ul className="navbar-nav">
+                            <li className="nav-item" onClick={() => setLanguage("serbian")}>
+                                <a className="nav-link"><img src={flagSerbia} alt="serbian language" width="30" /></a>
+                            </li>
+                            <li className="nav-item" onClick={() => setLanguage("english")}>
+                                <a className="nav-link"><img src={flagEng} alt="english language" width="30" /></a>
+                            </li>
+                            <li className="nav-item" onClick={() => setLanguage("german")}>
+                                <a className="nav-link"><img src={flagGermany} alt="german language" width="30" /></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
