@@ -27,4 +27,6 @@
     color: #214be4;
   }
   
-  
+  .glow-effect {
+    filter: url(#glow);
+  }

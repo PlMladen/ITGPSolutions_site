@@ -23,7 +23,7 @@ app.post('/api/send-email', (req, res) => {
     const mailOptions = {
         from: email,
         to: 'itgpsolutions@gmail.com',
-        subject: `Contactform data from ${firstName + " " + lastName + " " + company}`,
+        subject: `Contact form data from ${firstName + " " + lastName + " " + company}`,
         text: firstName + " " + lastName + "\nFirma: " + company + "\nCity: " + city + "\nPhone: " + phone + "\n\n" + message,
     };
 

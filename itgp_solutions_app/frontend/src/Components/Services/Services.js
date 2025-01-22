@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GlowFilter from "../GlowFilter/GlowFilter";
 
 const Services = () => {
     useEffect(() => {
@@ -129,11 +130,12 @@ const Services = () => {
 
   return (
     <section className="services-section py-5" id="services">
+      <GlowFilter />
       <div className="container">
-        <h2 className="text-center mb-4 custom-services-class" data-aos="fade-up">
+        <h2 className="text-center mb-4 custom-services-class glow-effect" data-aos="fade-up">
           {currentContent.title}
         </h2>
-        <p className="text-center custom-services-class mb-5" data-aos="fade-up">
+        <p className="text-center custom-services-class mb-5 glow-effect" data-aos="fade-up">
         {currentContent.description}
         </p>
         <div className="row g-4">

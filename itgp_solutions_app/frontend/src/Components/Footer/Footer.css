@@ -77,7 +77,6 @@
     opacity: 0.8;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .footer-top {
         flex-direction: column;
@@ -130,3 +129,7 @@
         font-size: 0.85rem;
     }
 }
+
+.glow-effect {
+    filter: url(#glow);
+  }

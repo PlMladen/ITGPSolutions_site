@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
+import GlowFilter from '../GlowFilter/GlowFilter';
 import { LanguageContext } from '../LanguageContext';
 import "./Contact.css";
 
@@ -53,16 +54,17 @@ export default function Contact() {
     if (language === "serbian") {
         return (
             <div>
+                <GlowFilter />
                 <section id="contact" className="contact-section py-5">
                     <div className="container">
-                        <h2 className="text-center mb-4">Kontaktirajte nas</h2>
-                        <p className="text-center mb-5">
+                        <h2 className="text-center mb-4 glow-effect">Kontaktirajte nas</h2>
+                        <p className="text-center mb-5 glow-effect">
                             Ukoliko imate bilo kakvih pitanja ili Vam je potrebno kvalitetno softversko rješenje, budite slobodni da nam pišete!
                         </p>
 
                         <form onSubmit={handleSubmit} className="row g-3">
                             <div className="col-md-6">
-                                <label htmlFor="firstName" className="form-label text-start d-block">Ime *</label>
+                                <label htmlFor="firstName" className="form-label text-start d-block glow-effect glow-effect">Ime *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -76,7 +78,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="lastName" className="form-label text-start d-block">Prezime *</label>
+                                <label htmlFor="lastName" className="form-label text-start d-block glow-effect">Prezime *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -90,7 +92,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="email" className="form-label text-start d-block">E-mail *</label>
+                                <label htmlFor="email" className="form-label text-start d-block glow-effect">E-mail *</label>
                                 <input
                                     type="email"
                                     className="form-control"
@@ -104,7 +106,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="phone" className="form-label text-start d-block">Kontakt telefon (Opciono)</label>
+                                <label htmlFor="phone" className="form-label text-start d-block glow-effect">Kontakt telefon (Opciono)</label>
                                 <input
                                     type="tel"
                                     className="form-control"
@@ -117,7 +119,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="company" className="form-label text-start d-block">Ime firme (Opciono)</label>
+                                <label htmlFor="company" className="form-label text-start d-block glow-effect">Ime firme (Opciono)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -130,7 +132,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="city" className="form-label text-start d-block">Grad (Opciono)</label>
+                                <label htmlFor="city" className="form-label text-start d-block glow-effect">Grad (Opciono)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -143,7 +145,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-12">
-                                <label htmlFor="message" className="form-label text-start d-block">Poruka *</label>
+                                <label htmlFor="message" className="form-label text-start d-block glow-effect">Poruka *</label>
                                 <textarea
                                     className="form-control"
                                     id="message"
@@ -171,14 +173,14 @@ export default function Contact() {
             <div>
                 <section id="contact" className="contact-section py-5">
                     <div className="container">
-                        <h2 className="text-center mb-4">Contact Us</h2>
-                        <p className="text-center mb-5">
+                        <h2 className="text-center mb-4 glow-effect">Contact Us</h2>
+                        <p className="text-center mb-5 glow-effect">
                             If you have questions or need custom software solutions, feel free to get in touch with us!
                         </p>
 
                         <form onSubmit={handleSubmit} className="row g-3">
                             <div className="col-md-6">
-                                <label htmlFor="firstName" className="form-label text-start d-block">First Name *</label>
+                                <label htmlFor="firstName" className="form-label text-start d-block glow-effect">First Name *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -192,7 +194,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="lastName" className="form-label text-start d-block">Last Name *</label>
+                                <label htmlFor="lastName" className="form-label text-start d-block glow-effect">Last Name *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -206,7 +208,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="email" className="form-label text-start d-block">E-mail *</label>
+                                <label htmlFor="email" className="form-label text-start d-block glow-effect">E-mail *</label>
                                 <input
                                     type="email"
                                     className="form-control"
@@ -220,7 +222,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="phone" className="form-label text-start d-block">Phone Number (Optional)</label>
+                                <label htmlFor="phone" className="form-label text-start d-block glow-effect">Phone Number (Optional)</label>
                                 <input
                                     type="tel"
                                     className="form-control"
@@ -233,7 +235,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="company" className="form-label text-start d-block">Company Name (Optional)</label>
+                                <label htmlFor="company" className="form-label text-start d-block glow-effect">Company Name (Optional)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -246,7 +248,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="city" className="form-label text-start d-block">City (Optional)</label>
+                                <label htmlFor="city" className="form-label text-start d-block glow-effect">City (Optional)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -259,7 +261,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-12">
-                                <label htmlFor="message" className="form-label text-start d-block">Message *</label>
+                                <label htmlFor="message" className="form-label text-start d-block glow-effect">Message *</label>
                                 <textarea
                                     className="form-control"
                                     id="message"
@@ -287,14 +289,14 @@ export default function Contact() {
             <div>
                 <section id="contact" className="contact-section py-5">
                     <div className="container">
-                        <h2 className="text-center mb-4">Kontaktieren Sie uns</h2>
-                        <p className="text-center mb-5">
+                        <h2 className="text-center mb-4 glow-effect">Kontaktieren Sie uns</h2>
+                        <p className="text-center mb-5 glow-effect">
                             Wenn Sie Fragen haben oder eine hochwertige Softwarelösung benötigen, schreiben Sie uns gerne!
                         </p>
 
                         <form onSubmit={handleSubmit} className="row g-3">
                             <div className="col-md-6">
-                                <label htmlFor="firstName" className="form-label text-start d-block">Vorname *</label>
+                                <label htmlFor="firstName" className="form-label text-start d-block glow-effect">Vorname *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -308,7 +310,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="lastName" className="form-label text-start d-block">Nachname *</label>
+                                <label htmlFor="lastName" className="form-label text-start d-block glow-effect">Nachname *</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -322,7 +324,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="email" className="form-label text-start d-block">E-Mail *</label>
+                                <label htmlFor="email" className="form-label text-start d-block glow-effect">E-Mail *</label>
                                 <input
                                     type="email"
                                     className="form-control"
@@ -336,7 +338,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="phone" className="form-label text-start d-block">Telefonnummer (Optional)</label>
+                                <label htmlFor="phone" className="form-label text-start d-block glow-effect">Telefonnummer (Optional)</label>
                                 <input
                                     type="tel"
                                     className="form-control"
@@ -349,7 +351,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="company" className="form-label text-start d-block">Firmenname (Optional)</label>
+                                <label htmlFor="company" className="form-label text-start d-block glow-effect">Firmenname (Optional)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -362,7 +364,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-md-6">
-                                <label htmlFor="city" className="form-label text-start d-block">Stadt (Optional)</label>
+                                <label htmlFor="city" className="form-label text-start d-block glow-effect">Stadt (Optional)</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -375,7 +377,7 @@ export default function Contact() {
                             </div>
 
                             <div className="col-12">
-                                <label htmlFor="message" className="form-label text-start d-block">Nachricht *</label>
+                                <label htmlFor="message" className="form-label text-start d-block glow-effect">Nachricht *</label>
                                 <textarea
                                     className="form-control"
                                     id="message"
