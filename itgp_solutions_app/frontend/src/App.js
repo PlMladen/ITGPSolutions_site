@@ -35,12 +35,14 @@ const ScrollToSection = () => {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <LanguageProvider>
       <Router>
         <ScrollToSection />
-        <div className="App">
-          <NavBar />
+        <div className="App" onClick={isMenuOpen ? closeMenu : null}>
+          <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <main>
             <section id="welcome"><Welcome /></section>
             <section id="about_us"><About_us /></section>
