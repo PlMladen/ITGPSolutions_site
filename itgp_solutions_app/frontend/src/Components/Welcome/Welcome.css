@@ -32,7 +32,7 @@
 .text-background {
     position: absolute;
     left: 50%;
-    top: -100%;
+    top: 0;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
     color: #00ff00;
@@ -40,9 +40,9 @@
     opacity: 0.5;
     white-space: pre-wrap;
     pointer-events: none;
-    animation: scrollBackground 10s linear infinite;
     transform: translateX(-50%);
     width: 100%;
+    animation: scrollBackground 200ms linear infinite;
 }
 
 .text-background.animate {
@@ -51,10 +51,13 @@
 
 @keyframes scrollBackground {
     0% {
-        top: -100%;
+        top: 0;
+    }
+    50% {
+        top: -25%;
     }
     100% {
-        top: 100%;
+        top: -50%;
     }
 }
 

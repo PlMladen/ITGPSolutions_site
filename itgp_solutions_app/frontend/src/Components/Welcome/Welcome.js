@@ -14,6 +14,7 @@ export default function Welcome() {
     } else {
         slogan = "> Default slogan - UNKNOWN LANGUAGE!";
     }
+
     const [visibleText, setVisibleText] = useState("");
     const [cursorPosition, setCursorPosition] = useState(75);
     const [fontSize, setFontSize] = useState(50);
@@ -106,9 +107,8 @@ export default function Welcome() {
         <section id="welcome_page" className={`welcome-container ${isBackgroundActive ? "background-active" : ""}`}>
             {!isBackgroundActive && <div className="black-overlay"></div>}
 
-            <div
-                className={`text-background ${isBackgroundActive ? "animate" : ""}`}
-            >
+            <div className={`text-background ${isBackgroundActive ? "animate" : ""}`}>
+                {renderBackgroundCode(backgroundCodeLines)}
                 {renderBackgroundCode(backgroundCodeLines)}
             </div>
 
