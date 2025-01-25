@@ -4,15 +4,15 @@ import { LanguageContext } from '../LanguageContext';
 
 export default function Welcome() {
     let language = useContext(LanguageContext)['language'];
-    var slogan = "";
+    var motto = "";
     if (language === "serbian") {
-        slogan = "> Budućnost počinje inovacijama - KRENIMO ZAJEDNO!";
+        motto = "> Budućnost počinje inovacijama - KRENIMO ZAJEDNO!";
     } else if (language === "english") {
-        slogan = "> The future begins with innovation - LET'S START TOGETHER!";
+        motto = "> The future begins with innovations - LET'S START TOGETHER!";
     } else if (language === "german") {
-        slogan = "> Die Zukunft beginnt mit Innovation - LASS UNS GEMEINSAM STARTEN!";
+        motto = "> Die Zukunft beginnt mit Innovationen - LASS UNS GEMEINSAM STARTEN!";
     } else {
-        slogan = "> Default slogan - UNKNOWN LANGUAGE!";
+        motto = "> Default motto - UNKNOWN LANGUAGE!";
     }
 
     const [visibleText, setVisibleText] = useState("");
@@ -53,8 +53,8 @@ export default function Welcome() {
     
         let index = 0;
         const typingInterval = setInterval(() => {
-            if (index < slogan.length) {
-                setVisibleText(slogan.slice(0, index + 1));
+            if (index < motto.length) {
+                setVisibleText(motto.slice(0, index + 1));
                 setCursorPosition((prevPosition) => {
                     if (textRef.current) {
                         const textLength = textRef.current.getComputedTextLength();
@@ -72,7 +72,7 @@ export default function Welcome() {
         }, 60);
     
         return () => clearInterval(typingInterval);
-    }, [slogan, language]);
+    }, [motto, language]);
 
     useEffect(() => {
         let cursorBlinkInterval;

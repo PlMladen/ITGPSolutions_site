@@ -170,6 +170,28 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                             </>
                         )}
                     </ul>
+                    <div className="footer" style={{ marginTop: '20px', textAlign: 'center' }}>
+                        <p className="footer-text">&copy; 2025 ITGP Solutions</p>
+                        {language === "serbian" ? (
+                            <ul className="footer-links">
+                                <li><Link to="/about_us" className="footer-link">O nama</Link></li>
+                                <li><Link to="/contact" className="footer-link">Kontakt</Link></li>
+                                <li><Link to="/privacy_policy" className="footer-link">Politika privatnosti</Link></li>
+                            </ul>
+                        ) : language === "english" ? (
+                            <ul className="footer-links">
+                                <li><Link to="/about_us" className="footer-link">About Us</Link></li>
+                                <li><Link to="/contact" className="footer-link">Contact</Link></li>
+                                <li><Link to="/privacy_policy" className="footer-link">Privacy Policy</Link></li>
+                            </ul>
+                        ) : (
+                            <ul className="footer-links">
+                                <li><Link to="/about_us" className="footer-link">Über uns</Link></li>
+                                <li><Link to="/contact" className="footer-link">Kontakt</Link></li>
+                                <li><Link to="/privacy_policy" className="footer-link">Datenschutzerklärung</Link></li>
+                            </ul>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
