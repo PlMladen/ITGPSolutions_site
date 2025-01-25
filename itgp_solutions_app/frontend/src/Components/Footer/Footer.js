@@ -176,19 +176,53 @@ function Footer() {
                         </div>
                         <div className="footer-nav">
                             <ul>
-                                <li><a href="#about">About us</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li><a href="#" onClick={() => setShowPrivacyModal(true)}>
-                                    {language === "serbian" ? "Politika privatnosti" : 
-                                    language === "english" ? "Privacy Policy" : 
-                                    "Datenschutzerklärung"}
-                                </a></li>
+                                <li>
+                                    <a href="#about">
+                                        {
+                                            language === "serbian" ? "O nama" : 
+                                            language === "english" ? "About us" : 
+                                                                     "Über uns"
+                                        }
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services">
+                                        {
+                                            language === "serbian" ? "Usluge" : 
+                                            language === "english" ? "Services" : 
+                                                                     "Dienstleistungen"
+                                        }
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#contact">
+                                        {
+                                            language === "serbian" ? "Kontakt" : 
+                                            language === "english" ? "Contact" : 
+                                                                      "Kontakt"
+                                        }
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onClick={() => setShowPrivacyModal(true)}>
+                                        {
+                                            language === "serbian" ? "Politika privatnosti" : 
+                                            language === "english" ? "Privacy Policy" : 
+                                                                     "Datenschutzerklärung"
+                                        }
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>© 2025 ITGP Solutions. All rights reserved.</p>
+                        <p>
+                            {
+                                language === "serbian" ? "© 2025 ITGP Solutions. Sva prava zadržana." : 
+                                language === "english" ? "© 2025 ITGP Solutions. All rights reserved." : 
+                                                         "© 2025 ITGP Solutions. Alle Rechte vorbehalten."
+                            }
+                        </p>
                         <div className="social-icons">
                             <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
                             <a href="#" title="Instagram"><img src={instagram_logo} alt="Instagram" /></a>
