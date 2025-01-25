@@ -120,7 +120,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                 </div>
             </nav>
 
-            <nav className="navbar navbar-light d-lg-none fixed-top" style={{ backgroundColor: '#c8c8cf' }}>
+            <nav className="navbar navbar-light d-lg-none fixed-top custom-navbar-class" style={{ backgroundColor: '#c8c8cf' }}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <img src={logo} alt="company-logo" width="200" />
@@ -139,13 +139,48 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                     className="menu-content"
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className="menu-header">
-                        <img src={logo} alt="company-logo" className="menu-logo" width="200" />
-                        <button className="close-btn" onClick={closeMenu}>X</button>
-                    </div>
                     <ul className="navbar-nav">
+                    <div className="">
+                    <ul className="navbar-nav ms-auto languages-nav-bar">
+                        <li className="nav-item nav-item-side">
+                            <a 
+                                className="nav-link-side" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("serbian"); 
+                                }}
+                            >
+                                <img src={flagSerbia} alt="serbian language" width="30" />
+                            </a>
+                        
+                            <a 
+                                className="nav-link-side" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("english"); 
+                                }}
+                            >
+                                <img src={flagEng} alt="english language" width="30" />
+                            </a>
+                        
+                            <a 
+                                className="nav-link-side" 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLanguage("german"); 
+                                }}
+                            >
+                                <img src={flagGermany} alt="german language" width="30" />
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
                         {language === "serbian" ? (
                             <>
+                                
                                 <Link className="nav-link" to="/" onClick={closeMenu}><li className="nav-item">Početak</li></Link>
                                 <Link className="nav-link" to="/about_us" onClick={closeMenu}><li className="nav-item">O nama</li></Link>
                                 <Link className="nav-link" to="/services" onClick={closeMenu}><li className="nav-item">Usluge</li></Link>

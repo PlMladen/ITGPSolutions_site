@@ -98,7 +98,7 @@
     .footer-bottom {
         flex-direction: column;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 0px;
     }
 
     .footer-bottom p {
