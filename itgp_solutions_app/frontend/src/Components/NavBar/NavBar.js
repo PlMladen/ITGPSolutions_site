@@ -4,14 +4,32 @@ import flagSerbia from '../images/srbija.png';
 import flagEng from '../images/eng.png';
 import flagGermany from '../images/de.png';
 import './NavBar.css';
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from '../LanguageContext';
 
 function NavBar({ isMenuOpen, setIsMenuOpen }) {
     const { language, setLanguage } = useContext(LanguageContext);
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen); 
-    const closeMenu = () => setIsMenuOpen(false);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        document.body.classList.toggle('no-scroll', !isMenuOpen);
+    } 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+        document.body.classList.remove('no-scroll');
+    }
+    
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, [isMenuOpen]);
 
     return (
         <div>
