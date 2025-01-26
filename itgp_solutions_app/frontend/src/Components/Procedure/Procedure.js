@@ -17,7 +17,7 @@ const Procedure = () => {
   const content = {
     serbian: {
       title: "Tok razvoja aplikacije",
-      description: "Od prvog kontakta do održavanja, evo kako se razvija vaša aplikacija.",
+      description: "Od prvog kontakta do održavanja, evo kako se razvija Vaša aplikacija.",
       steps: [
         { title: "Kontaktiranje korisnika", description: "Prvi kontakt sa korisnikom ili potencijalnim klijentom." },
         { title: "Upoznavanje sa korisnikom", description: "Sastanak sa klijentom da bismo razumeli njegove potrebe." },
@@ -25,7 +25,7 @@ const Procedure = () => {
         { title: "Prezentacija arhitekture", description: "Prikazujemo arhitekturu i diskutujemo detalje sa klijentom." },
         { title: "Implementacija i testiranje", description: "Implementacija i temeljno testiranje rešenja." },
         { title: "Prezentacija rešenja", description: "Prezentacija gotovog rešenja korisniku." },
-        { title: "Deployment", description: "Deploy rešenja na produkciju." },
+        { title: "Deployment", description: "Prelazak rešenja iz razvojne ili testne okoline u produkciju gde će biti dostupno krajnjim korisnicima." },
         { title: "Održavanje i unapređenja", description: "Nastavak podrške i implementacija novih funkcionalnosti." },
       ]
     },
@@ -39,7 +39,7 @@ const Procedure = () => {
         { title: "Architecture presentation", description: "We present the architecture and discuss details with the client." },
         { title: "Implementation and testing", description: "Implementation and thorough testing of the solution." },
         { title: "Solution presentation", description: "Presenting the final solution to the client." },
-        { title: "Deployment", description: "Deploying the solution to production." },
+        { title: "Deployment", description: "Transitioning the solution from a development or testing environment to a live environment where it will be accessible to end-users." },
         { title: "Maintenance and improvements", description: "Ongoing support and implementation of new features." },
       ]
     },
@@ -53,7 +53,7 @@ const Procedure = () => {
         { title: "Architekturpräsentation", description: "Wir präsentieren die Architektur und besprechen Details mit dem Kunden." },
         { title: "Implementierung und Tests", description: "Implementierung und gründliche Tests der Lösung." },
         { title: "Präsentation der Lösung", description: "Präsentation der endgültigen Lösung für den Kunden." },
-        { title: "Bereitstellung", description: "Bereitstellung der Lösung in der Produktion." },
+        { title: "Bereitstellung", description: "Die Überführung der Lösung aus einer Entwicklungs- oder Testumgebung in eine Produktionsumgebung, in der sie den Endbenutzern zugänglich sein wird." },
         { title: "Wartung und Verbesserungen", description: "Laufende Unterstützung und Implementierung neuer Funktionen." },
       ]
     }

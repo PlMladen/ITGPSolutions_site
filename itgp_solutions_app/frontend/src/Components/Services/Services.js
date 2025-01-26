@@ -20,12 +20,12 @@ const Services = () => {
       services: [
         {
           title: "Izrada web stranica",
-          desc: "Moderni, funkcionalni i responzivni sajtovi prilagođeni vašem brendu.",
+          desc: "Moderni, funkcionalni i responzivni sajtovi prilagođeni Vašem brendu.",
           icon: "bi-code-slash",
         },
         {
           title: "Web aplikacije",
-          desc: "Prilagodljive i skalabilne aplikacije za vaš biznis.",
+          desc: "Prilagodljive i skalabilne aplikacije za Vaš biznis.",
           icon: "bi-laptop",
         },
         {
@@ -45,7 +45,7 @@ const Services = () => {
         },
         {
           title: "SEO optimizacija",
-          desc: "Poboljšajte rangiranje vašeg sajta na pretraživačima.",
+          desc: "Poboljšajte rangiranje Vašeg sajta na pretraživačima.",
           icon: "bi-search",
         },
       ],
