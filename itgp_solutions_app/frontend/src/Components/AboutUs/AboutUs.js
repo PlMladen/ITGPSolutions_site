@@ -24,7 +24,7 @@ export default function AboutUs() {
                     </>
                 ) : language === "english" ? (
                     <>
-                        <h1 className="text-center mb-4">About Us</h1>
+                        <h1 className="text-center mb-4">About us</h1>
                         <p className="about-us-text">
                             We are a team of visionaries and experts dedicated to creating innovative solutions that shape the future.
                             Through collaboration and creativity, we set new standards in the industry and help our clients
@@ -50,7 +50,7 @@ export default function AboutUs() {
                     </>
                 ) : (
                     <>
-                        <h1 className="text-center mb-4">About Us</h1>
+                        <h1 className="text-center mb-4">About us</h1>
                         <p className="about-us-text">
                             We are a team of visionaries and experts dedicated to creating innovative solutions that shape the future.
                             Through collaboration and creativity, we set new standards in the industry and help our clients
