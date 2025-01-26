@@ -37,6 +37,7 @@
     }
 }
 
+
 .privacy-banner .accept-button,
 .privacy-banner .accept-all-button {
     background-color: #ff9800;
@@ -56,6 +57,7 @@
     background-color: #e68900;
 }
 
+
 .privacy-banner .close-button {
     position: absolute;
     top: 10px;
@@ -71,6 +73,7 @@
 .privacy-banner .close-button:hover {
     color: #ff9800;
 }
+
 
 .privacy-banner .options {
     margin-top: 20px;
@@ -102,6 +105,7 @@
     z-index: 9999;
 }
 
+
 .privacy-banner {
     background-color: #fff;
     padding: 20px;
@@ -109,12 +113,61 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 500px;
     max-width: 100%;
     z-index: 10000;
 }
 
+
 .no-scroll {
     overflow: hidden;
     height: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .privacy-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .privacy-banner .accept-button,
+    .privacy-banner .accept-all-button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .privacy-banner .option-button {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+
+    .privacy-banner .close-button {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .privacy-banner {
+        width: 95%;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .privacy-banner .accept-button,
+    .privacy-banner .accept-all-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .privacy-banner .option-button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .privacy-banner .close-button {
+        font-size: 16px;
+    }
 }
