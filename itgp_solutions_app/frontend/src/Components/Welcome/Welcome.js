@@ -208,7 +208,7 @@ export default function Welcome() {
                         <rect
                         x={isSmallScreen ? cursorPosition - 515 : cursorPosition}
                         y={isSmallScreen ? 545 : 441}
-                        width={isSmallScreen ? "7" : "3"}
+                        width={isSmallScreen ? "8" : "3"}
                         height={isSmallScreen ? "60" : "30"}
                         fill="#214be4"
                         />
@@ -216,16 +216,16 @@ export default function Welcome() {
                         <rect
                         x={isSmallScreen ? cursorPosition + 155 : cursorPosition - 5}
                         y={isSmallScreen ? 645 : 442}
-                        width={isSmallScreen ? "7" : "3"}
+                        width={isSmallScreen ? "8" : "3"}
                         height={isSmallScreen ? "58" : "31"}
                         fill="#214be4"
                     />
                     ) : (
                         <rect
-                        x={isSmallScreen ? cursorPosition + 310 : cursorPosition - 5}
-                        y={isSmallScreen ? 651 : 444}
-                        width={isSmallScreen ? "7" : "3"}
-                        height={isSmallScreen ? "50" : "28"}
+                        x={isSmallScreen ? cursorPosition + 325 : cursorPosition - 5}
+                        y={isSmallScreen ? 648 : 444}
+                        width={isSmallScreen ? "8" : "3"}
+                        height={isSmallScreen ? "53" : "28"}
                         fill="#214be4"
                     />
                     )

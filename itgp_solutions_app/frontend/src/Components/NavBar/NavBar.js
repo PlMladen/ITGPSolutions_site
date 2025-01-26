@@ -35,7 +35,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-flex fixed-top custom-navbar-class" style={{ backgroundColor: '#c8c8cf' }}>
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         <img src={logo} alt="company-logo" width="200" />
                     </a>
 
@@ -101,7 +101,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         <li className="nav-item">
                             <a 
                                 className="nav-link" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("serbian"); 
@@ -113,7 +113,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         <li className="nav-item">
                             <a 
                                 className="nav-link" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("english"); 
@@ -125,7 +125,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         <li className="nav-item">
                             <a 
                                 className="nav-link" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("german"); 
@@ -163,7 +163,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         <li className="nav-item nav-item-side">
                             <a 
                                 className="nav-link-side" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("serbian"); 
@@ -174,7 +174,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         
                             <a 
                                 className="nav-link-side" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("english"); 
@@ -185,7 +185,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         
                             <a 
                                 className="nav-link-side" 
-                                href="#"
+                                href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setLanguage("german"); 

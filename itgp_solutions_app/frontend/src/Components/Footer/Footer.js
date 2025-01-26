@@ -5,6 +5,7 @@ import instagram_logo from '../images/instagram-icon.png';
 import { useContext } from "react";
 import { LanguageContext } from '../LanguageContext';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const { language } = useContext(LanguageContext);
@@ -172,56 +173,49 @@ function Footer() {
                 <div className="container">
                     <div className="footer-top">
                         <div className="footer-logo">
-                            <a href="#" className="logo glow-effect">ITGP Solutions</a>
+                            <Link to="/" className="logo glow-effect">ITGP Solutions</Link>
                         </div>
                         <div className="footer-nav">
                             <ul>
                                 <li>
-                                    <a href="#about">
-                                        {
-                                            language === "serbian" ? "O nama" : 
-                                            language === "english" ? "About us" : 
-                                                                     "Über uns"
-                                        }
-                                    </a>
+                                    <Link to="/about">
+                                        {language === "serbian" ? "O nama" :
+                                         language === "english" ? "About us" : 
+                                                                  "Über uns"}
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#services">
-                                        {
-                                            language === "serbian" ? "Usluge" : 
-                                            language === "english" ? "Services" : 
-                                                                     "Dienstleistungen"
-                                        }
-                                    </a>
+                                    <Link to="/services">
+                                        {language === "serbian" ? "Usluge" :
+                                         language === "english" ? "Services" : 
+                                                                  "Dienstleistungen"}
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#contact">
-                                        {
-                                            language === "serbian" ? "Kontakt" : 
-                                            language === "english" ? "Contact" : 
-                                                                      "Kontakt"
-                                        }
-                                    </a>
+                                    <Link to="/contact">
+                                        {language === "serbian" ? "Kontakt" :
+                                         language === "english" ? "Contact" : 
+                                                                  "Kontakt"}
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" onClick={() => setShowPrivacyModal(true)}>
-                                        {
-                                            language === "serbian" ? "Politika privatnosti" : 
-                                            language === "english" ? "Privacy Policy" : 
-                                                                     "Datenschutzerklärung"
-                                        }
-                                    </a>
+                                    <button 
+                                        className="btn-link" 
+                                        onClick={() => setShowPrivacyModal(true)}
+                                        style={{ background: "none", border: "none", cursor: "pointer", padding: "0", color: "inherit" }}>
+                                        {language === "serbian" ? "Politika privatnosti" :
+                                         language === "english" ? "Privacy Policy" : 
+                                                                  "Datenschutzerklärung"}
+                                    </button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="footer-bottom">
                         <p>
-                            {
-                                language === "serbian" ? "© 2025 ITGP Solutions. Sva prava zadržana." : 
-                                language === "english" ? "© 2025 ITGP Solutions. All rights reserved." : 
-                                                         "© 2025 ITGP Solutions. Alle Rechte vorbehalten."
-                            }
+                            {language === "serbian" ? "© 2025 ITGP Solutions. Sva prava zadržana." :
+                             language === "english" ? "© 2025 ITGP Solutions. All rights reserved." : 
+                                                      "© 2025 ITGP Solutions. Alle Rechte vorbehalten."}
                         </p>
                         <div className="social-icons">
                             <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
@@ -237,9 +231,9 @@ function Footer() {
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title">
-                                    {language === "serbian" ? "Politika privatnosti" : 
-                                    language === "english" ? "Privacy Policy" : 
-                                    "Datenschutzerklärung"}
+                                    {language === "serbian" ? "Politika privatnosti" :
+                                     language === "english" ? "Privacy Policy" : 
+                                                              "Datenschutzerklärung"}
                                 </h5>
                                 <button type="button" className="btn-close" onClick={() => setShowPrivacyModal(false)}></button>
                             </div>
@@ -248,7 +242,9 @@ function Footer() {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" onClick={() => setShowPrivacyModal(false)}>
-                                    {language === "serbian" ? "Zatvori" : language === "english" ? "Close" : "Schließen"}
+                                    {language === "serbian" ? "Zatvori" : 
+                                     language === "english" ? "Close" : 
+                                                              "Schließen"}
                                 </button>
                             </div>
                         </div>
