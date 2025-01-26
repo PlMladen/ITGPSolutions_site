@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ITGPSolutions_site/static/css/main.8d403635.css",
+    "main.js": "/ITGPSolutions_site/static/js/main.520212e9.js",
+    "static/js/488.5aee1539.chunk.js": "/ITGPSolutions_site/static/js/488.5aee1539.chunk.js",
+    "static/media/instagram-icon.png": "/ITGPSolutions_site/static/media/instagram-icon.9ed60a2e091f9e35c3b3.png",
+    "static/media/bootstrap-icons.woff?": "/ITGPSolutions_site/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/ITGPSolutions_site/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/ITGPSolutions_site/index.html",
+    "main.8d403635.css.map": "/ITGPSolutions_site/static/css/main.8d403635.css.map",
+    "main.520212e9.js.map": "/ITGPSolutions_site/static/js/main.520212e9.js.map",
+    "488.5aee1539.chunk.js.map": "/ITGPSolutions_site/static/js/488.5aee1539.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d403635.css",
+    "static/js/main.520212e9.js"
+  ]
+}
