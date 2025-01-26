@@ -178,7 +178,7 @@ function Footer() {
                         <div className="footer-nav">
                             <ul>
                                 <li>
-                                    <Link to="/about">
+                                    <Link to="/about_us">
                                         {language === "serbian" ? "O nama" :
                                          language === "english" ? "About us" : 
                                                                   "Über uns"}
