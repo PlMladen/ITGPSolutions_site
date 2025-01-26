@@ -5,7 +5,14 @@ import { LanguageContext } from '../LanguageContext';
 function PrivacyBanner() {
     const [accepted, setAccepted] = useState(false);
     const [showPreferences, setShowPreferences] = useState(false);
-    
+    const [preferences, setPreferences] = useState({
+        acceptAll: false,
+        acceptEssentials: false,
+        marketing: false,
+        ext_media: false,
+        essentials: false
+    });
+
     const { language } = useContext(LanguageContext);
 
     const languages = {
@@ -25,7 +32,15 @@ function PrivacyBanner() {
             acceptAll: "I accept all",
             acceptEssentials: "Only essential cookies",
             managePreferences: "Manage Privacy Preferences",
-            privacyPolicy: "Privacy Policy",
+            essentials: "Essential",
+            essentials_desc: "Essential services enable basic functions and are necessary for the proper function of the website.",
+            privacy_Policy: "Privacy Policy",
+            statistics: "Statistics",
+            statistics_desc : "Statistics cookies collect usage information, enabling us to gain insights into how our visitors interact with our website.",
+            marketing: "Marketing",
+            marketing_desc: "Marketing services are used by third-party advertisers or publishers to display personalized ads. They do this by tracking visitors across websites.",
+            ext_media: "External Media",
+            ext_media_desc: "Content from video platforms and social media platforms is blocked by default. If External Media services are accepted, access to those contents no longer requires manual consent."
         },
         german: {
             title: "Datenschutz-Präferenzen",
@@ -44,6 +59,16 @@ function PrivacyBanner() {
             acceptEssentials: "Nur essentielle Cookies",
             managePreferences: "Individuelle Datenschutz-Präferenzen",
             privacyPolicy: "Datenschutzerklärung",
+            essentials: "Essentiell",
+            essentials_desc: "Essentielle Dienste ermöglichen grundlegende Funktionen und sind für das einwandfreie Funktionieren der Website erforderlich.",
+            privacy_Policy: "Datenschutzerklärung",
+            statistics: "Statistiken",
+            statistics_desc: "Statistik-Cookies sammeln Nutzungsinformationen und ermöglichen uns, Einblicke zu gewinnen, wie Besucher mit unserer Website interagieren.",
+            marketing: "Marketing",
+            marketing_desc: "Marketing-Dienste werden von Drittanbietern oder Publishern genutzt, um personalisierte Anzeigen anzuzeigen. Sie tun dies, indem sie Besucher über Websites hinweg verfolgen.",
+            ext_media: "Externe Medien",
+            ext_media_desc: "Inhalte von Video-Plattformen und sozialen Medien sind standardmäßig blockiert. Wenn externe Mediendienste akzeptiert werden, erfordert der Zugriff auf diese Inhalte keine manuelle Zustimmung mehr."
+
         },
         serbian: {
             title: "Podešavanja privatnosti",
@@ -62,23 +87,28 @@ function PrivacyBanner() {
             acceptEssentials: "Samo esencijalni kolačići",
             managePreferences: "Podesite opcije privatnosti",
             privacyPolicy: "Politika privatnosti",
+            essentials: "Osnovno",
+            essentials_desc: "Osnovne usluge omogućavaju osnovne funkcije i neophodne su za pravilno funkcionisanje sajta.",
+            privacy_Policy: "Politika privatnosti",
+            statistics: "Statistika",
+            statistics_desc: "Kolačići za statistiku prikupljaju informacije o korišćenju, omogućavajući nam da steknemo uvid u to kako posetioci koriste naš sajt.",
+            marketing: "Marketing",
+            marketing_desc: "Marketing usluge koriste treći oglašivači ili izdavači za prikazivanje personalizovanih oglasa. To čine praćenjem posetilaca na različitim sajtovima.",
+            ext_media: "Eksterni mediji",
+            ext_media_desc: "Sadržaj sa video platformi i društvenih mreža je blokiran po podrazumevanim podešavanjima. Ako su prihvaćeni eksterni mediji, pristup tim sadržajima više ne zahteva ručnu saglasnost."
         }
     };
+
     if(localStorage.getItem("privacyAccepted") == null && accepted === false){
         document.body.classList.add("no-scroll");
-        console.log(document.querySelector('navbardiv'))
-        
     }
+
     useEffect(() => {
         const hasAccepted = localStorage.getItem("privacyAccepted");
         
         if (hasAccepted !== null) {
             setAccepted(true);
         }
-
-        return () => {
-            
-        };
     }, []);
 
     const handleAcceptAll = () => {
@@ -102,6 +132,19 @@ function PrivacyBanner() {
         document.body.classList.remove("no-scroll");
     };
 
+    const handleSavePreferences = () => {
+        localStorage.setItem("privacyAccepted", preferences.acceptEssentials ? "essential" : "all");
+        setAccepted(true);
+        document.body.classList.remove("no-scroll");
+    };
+
+    const handleTogglePreference = (preference) => {
+        setPreferences((prevPreferences) => ({
+            ...prevPreferences,
+            [preference]: !prevPreferences[preference],
+        }));
+    };
+
     if (accepted) {
         return null;
     }
@@ -119,14 +162,40 @@ function PrivacyBanner() {
                 </div>
                 {showPreferences && (
                     <div className="preferences">
-                        {language === "serbian" ? (
-                            <p>Detalje o kolačićima i njihovim postavkama možete promeniti u opcijama.</p>
-                        ) : language === "english" ? (
-                            <p>You can change the details about cookies and their settings in the options.</p>
-                        ) : (
-                            <p>Details zu Cookies und ihren Einstellungen können in den Optionen geändert werden.</p>
-                        )}
-                        <button className="option-button">{languages[language].privacyPolicy}</button>
+                        <h3>{languages[language].managePreferences}</h3>
+                        <div>
+                            <input
+                                type="checkbox"
+                                checked={preferences.essentials}
+                                onChange={() => handleTogglePreference('essentials')}
+                            />
+                            <label>{languages[language].essentials}</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                checked={preferences.acceptEssentials}
+                                onChange={() => handleTogglePreference('acceptEssentials')}
+                            />
+                            <label>{languages[language].statistics}</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                checked={preferences.marketing}
+                                onChange={() => handleTogglePreference('marketing')}
+                            />
+                            <label>{languages[language].marketing}</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                checked={preferences.ext_media}
+                                onChange={() => handleTogglePreference('ext_media')}
+                            />
+                            <label>{languages[language].ext_media}</label>
+                        </div>
+                        <button onClick={handleSavePreferences} className="accept-button">{languages[language].managePreferences}</button>
                     </div>
                 )}
             </div>

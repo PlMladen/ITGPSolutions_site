@@ -1,5 +1,4 @@
 import './Footer.css';
-import facebook_logo from '../images/facebook-icon.png';
 import linkedin_logo from '../images/linkedin-icon.png';
 import instagram_logo from '../images/instagram-icon.png';
 import { useContext } from "react";
@@ -178,7 +177,7 @@ function Footer() {
                         <div className="footer-nav">
                             <ul>
                                 <li>
-                                    <Link to="/about_us">
+                                    <Link to="/AboutUs">
                                         {language === "serbian" ? "O nama" :
                                          language === "english" ? "About us" : 
                                                                   "Über uns"}

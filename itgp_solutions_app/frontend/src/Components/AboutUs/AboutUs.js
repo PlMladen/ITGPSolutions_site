@@ -1,13 +1,13 @@
 import React from 'react';
-import './About_us.css';
+import './AboutUs.css';
 import { useContext } from "react";
 import { LanguageContext } from '../LanguageContext';
 
-export default function About_us() {
+export default function AboutUs() {
     const { language } = useContext(LanguageContext);
 
     return (
-        <section id="about_us" className="about-us-container">
+        <section id="AboutUs" className="about-us-container">
             <div className="about-us-content">
                 {language === "serbian" ? (
                     <>
