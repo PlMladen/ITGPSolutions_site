@@ -13,14 +13,14 @@ function Footer() {
     const policies = {
         serbian: `
         <h1>Politika privatnosti</h1>
-        <p>Ova politika privatnosti opisuje kako prikupljamo, koristimo i delimo vaše lične podatke. Molimo vas da pažljivo pročitate ovaj dokument.</p>
+        <p>Ova politika privatnosti opisuje kako prikupljamo, koristimo i delimo Vaše lične podatke. Molimo vas da pažljivo pročitate ovaj dokument.</p>
         <h2>1. Informacije koje prikupljamo</h2>
         <p>Prikupljamo sledeće vrste informacija:</p>
         <ul>
             <li><strong>Lične informacije:</strong> Ime, prezime, adresa e-pošte, broj telefona i druge informacije koje nam dobrovoljno dostavite prilikom kontakta.</li>
             <li><strong>Automatski prikupljene informacije:</strong> IP adresa, podaci o uređaju, tip pregledača, i podaci o korišćenju (npr. posete stranici i klikovi).</li>
         </ul>
-        <h2>2. Kako koristimo vaše informacije</h2>
+        <h2>2. Kako koristimo Vaše informacije</h2>
         <p>Vaše informacije koristimo za sledeće svrhe:</p>
         <ul>
             <li>Pružanje i unapređenje naših usluga.</li>
@@ -28,8 +28,8 @@ function Footer() {
             <li>Slanje važnih obaveštenja, ažuriranja i promotivnih ponuda (ukoliko ste dali saglasnost).</li>
             <li>Analizu i istraživanje radi boljeg razumevanja naših korisnika.</li>
         </ul>
-        <h2>3. Kako delimo vaše informacije</h2>
-        <p>Nikada nećemo prodavati, iznajmljivati ili deliti vaše lične informacije trećim stranama, osim u sledećim situacijama:</p>
+        <h2>3. Kako delimo Vaše informacije</h2>
+        <p>Nikada nećemo prodavati, iznajmljivati ili deliti Vaše lične informacije trećim stranama, osim u sledećim situacijama:</p>
         <ul>
             <li>Kada je to neophodno za pružanje usluga (npr. integracija sa platnim procesorima).</li>
             <li>U skladu sa zakonskim zahtevima ili kada je to neophodno radi zaštite naših prava.</li>
@@ -37,16 +37,16 @@ function Footer() {
         <h2>4. Kolačići (Cookies)</h2>
         <p>Naš veb sajt koristi kolačiće za:</p>
         <ul>
-            <li>Pamćenje vaših postavki i preferencija.</li>
+            <li>Pamćenje Vaših postavki i preferencija.</li>
             <li>Analitiku i praćenje korisničkog ponašanja.</li>
         </ul>
-        <p>Možete onemogućiti kolačiće u podešavanjima vašeg pregledača, ali to može uticati na funkcionalnost sajta.</p>
+        <p>Možete onemogućiti kolačiće u podešavanjima Vašeg pregledača, ali to može uticati na funkcionalnost sajta.</p>
         <h2>5. Zaštita podataka</h2>
-        <p>Preduzimamo odgovarajuće tehničke i organizacione mere kako bismo zaštitili vaše informacije od neovlašćenog pristupa, gubitka ili zloupotrebe. Međutim, nijedan sistem nije potpuno siguran i ne možemo garantovati apsolutnu bezbednost podataka.</p>
+        <p>Preduzimamo odgovarajuće tehničke i organizacione mere kako bismo zaštitili Vaše informacije od neovlašćenog pristupa, gubitka ili zloupotrebe. Međutim, nijedan sistem nije potpuno siguran i ne možemo garantovati apsolutnu bezbednost podataka.</p>
         <h2>6. Vaša prava</h2>
-        <p>U zavisnosti od jurisdikcije, imate sledeća prava u vezi sa vašim informacijama:</p>
+        <p>U zavisnosti od jurisdikcije, imate sledeća prava u vezi sa Vašim informacijama:</p>
         <ul>
-            <li>Pravo na pristup informacijama koje čuvamo o vama.</li>
+            <li>Pravo na pristup informacijama koje čuvamo o Vama.</li>
             <li>Pravo na ispravku netačnih informacija.</li>
             <li>Pravo na brisanje informacija ("pravo na zaborav").</li>
             <li>Pravo na povlačenje saglasnosti za obradu podataka.</li>
@@ -58,7 +58,7 @@ function Footer() {
             <li>E-mail: itgpsolutions@gmail.com</li>
         </ul>
         <h2>8. Izmene politike privatnosti</h2>
-        <p>Zadržavamo pravo na izmenu ove politike privatnosti u bilo kom trenutku. Sve izmene biće objavljene na ovoj stranici, a vaša dalja upotreba usluga podrazumeva prihvatanje novih uslova.</p>
+        <p>Zadržavamo pravo na izmenu ove politike privatnosti u bilo kom trenutku. Sve izmene biće objavljene na ovoj stranici, a Vaša dalja upotreba usluga podrazumeva prihvatanje novih uslova.</p>
         <p>Poslednja izmena: 20.01.2025.</p>
         
         `,

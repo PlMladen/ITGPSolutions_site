@@ -72,15 +72,15 @@ function PrivacyBanner() {
         },
         serbian: {
             title: "Podešavanja privatnosti",
-            description: `Potrebna nam je vaša saglasnost pre nego što nastavite sa korišćenjem našeg sajta.
+            description: `Potrebna nam je Vaša saglasnost pre nego što nastavite sa korišćenjem našeg sajta.
             Ako imate manje od 16 godina i želite da date saglasnost za opcione usluge, morate zatražiti dozvolu od svojih zakonskih staratelja.
-            Koristimo kolačiće i druge tehnologije na našem sajtu. Neki od njih su neophodni, dok nam drugi pomažu da unapredimo ovaj sajt i vaše iskustvo.
+            Koristimo kolačiće i druge tehnologije na našem sajtu. Neki od njih su neophodni, dok nam drugi pomažu da unapredimo ovaj sajt i Vaše iskustvo.
             Lični podaci mogu biti obrađeni (npr. IP adrese), na primer za personalizovane oglase i sadržaje ili za merenje oglasa i sadržaja.
-            Više informacija o korišćenju vaših podataka možete pronaći u našoj politici privatnosti.
-            Niste obavezni da date saglasnost za obradu vaših podataka kako biste koristili ovu ponudu.
+            Više informacija o korišćenju Vaših podataka možete pronaći u našoj politici privatnosti.
+            Niste obavezni da date saglasnost za obradu Vaših podataka kako biste koristili ovu ponudu.
             Svoju saglasnost možete opozvati ili prilagoditi izbor u bilo kom trenutku u podešavanjima. Imajte na umu da, u zavisnosti od pojedinačnih podešavanja, možda neće sve funkcije sajta biti dostupne.
             
-            Neke usluge obrađuju lične podatke u SAD-u. Davanjem saglasnosti za korišćenje ovih usluga, takođe pristajete na obradu vaših podataka u SAD-u u skladu sa
+            Neke usluge obrađuju lične podatke u SAD-u. Davanjem saglasnosti za korišćenje ovih usluga, takođe pristajete na obradu Vaših podataka u SAD-u u skladu sa
             članom 49 stavom 1 tačkom (a) GDPR-a. Evropski sud pravde klasifikuje SAD kao zemlju sa nedovoljnim nivoom zaštite podataka u skladu sa standardima EU.
             Na primer, postoji rizik da će američke vlasti obrađivati lične podatke u okviru programa nadzora bez mogućnosti pravne zaštite za građane EU.`,
             acceptAll: "Prihvatam sve",
