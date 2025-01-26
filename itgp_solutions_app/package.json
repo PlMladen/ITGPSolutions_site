@@ -1,1 +1,7 @@
-{}
+{
+    "homepage": "https://PlMladen.github.io/ITGPSolutions_site",
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+      }
+}
