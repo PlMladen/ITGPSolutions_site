@@ -44,7 +44,7 @@ const Procedure = () => {
       ]
     },
     german: {
-      title: "Anwendungsentwicklungsprozess",
+      title: "Entwicklungsprozess",
       description: "Vom ersten Kontakt bis zur Wartung, so wird Ihre Anwendung entwickelt.",
       steps: [
         { title: "Kundenkontakt", description: "Der erste Kontakt mit dem Kunden oder potenziellen Kunden." },

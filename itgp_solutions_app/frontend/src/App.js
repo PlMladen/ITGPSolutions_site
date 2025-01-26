@@ -7,6 +7,8 @@ import Welcome from './Components/Welcome/Welcome';
 import About_us from './Components/About_us/About_us';
 import Services from './Components/Services/Services';
 import Procedure from './Components/Procedure/Procedure';
+import PrivacyBanner from './Components/Banner/PrivacyBanner';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -39,6 +41,7 @@ function App() {
 
   return (
     <LanguageProvider>
+      <PrivacyBanner />
       <Router>
         <ScrollToSection />
         <div className="App" onClick={isMenuOpen ? closeMenu : null}>
@@ -51,6 +54,7 @@ function App() {
             <section id="contact"><Contact /></section>
           </main>
           <Footer />
+          <ScrollToTop />
         </div>
       </Router>
     </LanguageProvider>
