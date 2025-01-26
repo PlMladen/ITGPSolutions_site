@@ -160,12 +160,12 @@
 }
 
 .modal-body h2, p, ul {
-    text-align: justify;
+    text-align: center;
 }
 
 .modal-footer {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .modal-footer .btn {

@@ -9,8 +9,10 @@
     "bootstrap-icons": "^1.11.3",
     "cors": "^2.8.5",
     "cra-template": "1.2.0",
+    "lucide-react": "^0.474.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
+    "react-bootstrap-icons": "^1.11.5",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-scripts": "5.0.1"
