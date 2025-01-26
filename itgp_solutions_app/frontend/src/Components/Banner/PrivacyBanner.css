@@ -1,18 +1,16 @@
-/* Overlay koji blokira sadržaj sajta */
 .privacy-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Poluprovidna pozadina */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 9998;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Privacy Banner sa prozorskim izgledom */
 .privacy-banner {
     background-color: white;
     color: #333;
@@ -27,10 +25,9 @@
     font-size: 14px;
     position: relative;
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Animacija */
+    animation: fadeIn 0.5s forwards;
 }
 
-/* Animacija za pojavljivanje */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -40,7 +37,6 @@
     }
 }
 
-/* Dugme za prihvatanje i ostale stilizacije */
 .privacy-banner .accept-button,
 .privacy-banner .accept-all-button {
     background-color: #ff9800;
@@ -96,15 +92,14 @@
     background-color: #ddd;
 }
 
-/* Dodajte ovo u vaš PrivacyBanner.css */
 .privacy-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Poluprovidni sloj */
-    z-index: 9999; /* Pobrinite se da overlay bude ispred svih elemenata */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
 
 .privacy-banner {
@@ -117,4 +112,9 @@
     width: 400px;
     max-width: 100%;
     z-index: 10000;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
 }

@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './PrivacyBanner.css';
+import { LanguageContext } from '../LanguageContext';
 
 function PrivacyBanner() {
     const [accepted, setAccepted] = useState(false);
     const [showPreferences, setShowPreferences] = useState(false);
-    const [language, setLanguage] = useState('en'); // Default na engleskom jeziku
+    
+    const { language } = useContext(LanguageContext);
 
     const languages = {
-        en: {
+        english: {
             title: "Privacy Preferences",
             description: "We need your consent before you can continue using the site. By clicking 'Accept All', you consent to the use of optional cookies. You can customize your cookie preferences or read more in our Privacy Policy.",
             acceptAll: "I accept all",
@@ -15,7 +17,7 @@ function PrivacyBanner() {
             managePreferences: "Manage Privacy Preferences",
             privacyPolicy: "Privacy Policy",
         },
-        de: {
+        german: {
             title: "Datenschutz-Präferenzen",
             description: "Wir benötigen Ihre Einwilligung, bevor Sie die Seite weiter nutzen können. Klicken Sie auf 'Alle akzeptieren', um der Nutzung optionaler Cookies zuzustimmen. Sie können Ihre Cookie-Präferenzen anpassen oder mehr in unserer Datenschutzerklärung lesen.",
             acceptAll: "Ich akzeptiere alle",
@@ -23,7 +25,7 @@ function PrivacyBanner() {
             managePreferences: "Individuelle Datenschutz-Präferenzen",
             privacyPolicy: "Datenschutzerklärung",
         },
-        sr: {
+        serbian: {
             title: "Podešavanja privatnosti",
             description: "Potrebna nam je vaša saglasnost pre nego što nastavite sa korišćenjem sajta. Klikom na 'Prihvatam sve' dajete saglasnost za upotrebu opcionalnih kolačića. Možete prilagoditi postavke kolačića ili pročitati više u našoj Politici privatnosti.",
             acceptAll: "Prihvatam sve",
@@ -32,30 +34,31 @@ function PrivacyBanner() {
             privacyPolicy: "Politika privatnosti",
         }
     };
-
+    if(localStorage.getItem("privacyAccepted") == null && accepted === false){
+        document.body.classList.add("no-scroll");
+    }
     useEffect(() => {
         const hasAccepted = localStorage.getItem("privacyAccepted");
-        if (hasAccepted) {
+        
+        if (hasAccepted !== null) {
             setAccepted(true);
         }
-        
-        // Dodajemo 'no-scroll' klasu na body kad je banner aktivan
-        document.body.classList.add("no-scroll");
 
-        // Uklanjamo 'no-scroll' klasu kada korisnik prihvati kolačiće
         return () => {
-            document.body.classList.remove("no-scroll");
+            
         };
     }, []);
 
     const handleAcceptAll = () => {
         localStorage.setItem("privacyAccepted", "all");
         setAccepted(true);
+        document.body.classList.remove("no-scroll");
     };
 
     const handleAcceptEssentials = () => {
         localStorage.setItem("privacyAccepted", "essential");
         setAccepted(true);
+        document.body.classList.remove("no-scroll");
     };
 
     const handlePreferences = () => {
@@ -63,11 +66,12 @@ function PrivacyBanner() {
     };
 
     const handleClose = () => {
-        setAccepted(true); // Zatvori banner
+        setAccepted(true);
+        document.body.classList.remove("no-scroll");
     };
 
     if (accepted) {
-        return null; // Ako je prihvaćeno, ne prikazuj ništa
+        return null;
     }
 
     return (

@@ -12,22 +12,25 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        document.body.classList.toggle('no-scroll', !isMenuOpen);
+            document.body.classList.toggle('no-scroll', !isMenuOpen);
     } 
     const closeMenu = () => {
         setIsMenuOpen(false);
-        document.body.classList.remove('no-scroll');
+        if(localStorage.getItem("privacyAccepted") !== null)
+            document.body.classList.remove('no-scroll');
     }
     
     useEffect(() => {
         if (isMenuOpen) {
             document.body.classList.add('no-scroll');
         } else {
-            document.body.classList.remove('no-scroll');
+            if(localStorage.getItem("privacyAccepted") !== null)
+                document.body.classList.remove('no-scroll');
         }
     
         return () => {
-            document.body.classList.remove('no-scroll');
+            if(localStorage.getItem("privacyAccepted") !== null)
+                document.body.classList.remove('no-scroll');
         };
     }, [isMenuOpen]);
 
