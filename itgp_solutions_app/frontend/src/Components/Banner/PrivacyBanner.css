@@ -1,24 +1,22 @@
-/* Overlay koji blokira sadržaj sajta */
 .privacy-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Poluprovidna pozadina */
-    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999 !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Privacy Banner sa prozorskim izgledom */
 .privacy-banner {
     background-color: white;
     color: #333;
     padding: 30px;
     text-align: center;
-    z-index: 9999;
+    z-index: 9999999 !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     width: 80%;
@@ -27,10 +25,9 @@
     font-size: 14px;
     position: relative;
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Animacija */
+    animation: fadeIn 0.5s forwards;
 }
 
-/* Animacija za pojavljivanje */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -40,7 +37,7 @@
     }
 }
 
-/* Dugme za prihvatanje i ostale stilizacije */
+
 .privacy-banner .accept-button,
 .privacy-banner .accept-all-button {
     background-color: #ff9800;
@@ -60,6 +57,7 @@
     background-color: #e68900;
 }
 
+
 .privacy-banner .close-button {
     position: absolute;
     top: 10px;
@@ -75,6 +73,7 @@
 .privacy-banner .close-button:hover {
     color: #ff9800;
 }
+
 
 .privacy-banner .options {
     margin-top: 20px;
@@ -96,25 +95,56 @@
     background-color: #ddd;
 }
 
-/* Dodajte ovo u vaš PrivacyBanner.css */
-.privacy-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+
+.no-scroll {
+    overflow: hidden;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Poluprovidni sloj */
-    z-index: 9999; /* Pobrinite se da overlay bude ispred svih elemenata */
 }
 
-.privacy-banner {
-    background-color: #fff;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    max-width: 100%;
-    z-index: 10000;
+
+@media (max-width: 768px) {
+    .privacy-banner {
+        width: 90%;
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .privacy-banner .accept-button,
+    .privacy-banner .accept-all-button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .privacy-banner .option-button {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+
+    .privacy-banner .close-button {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .privacy-banner {
+        width: 95%;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .privacy-banner .accept-button,
+    .privacy-banner .accept-all-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .privacy-banner .option-button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .privacy-banner .close-button {
+        font-size: 16px;
+    }
 }

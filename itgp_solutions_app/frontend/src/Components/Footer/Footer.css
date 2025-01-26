@@ -136,7 +136,7 @@
 
 .modal-dialog {
     max-width: 800px;
-    margin: 30px auto;
+    margin: 35px auto;
 }
 
 .modal-content {
@@ -157,6 +157,7 @@
     overflow-y: auto;
     font-size: 1rem;
     line-height: 1.6;
+    margin-top: 15px;
 }
 
 .modal-body h2, p, ul {
@@ -211,3 +212,7 @@
     }
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}

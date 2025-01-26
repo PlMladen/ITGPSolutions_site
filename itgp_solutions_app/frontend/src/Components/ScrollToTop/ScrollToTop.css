@@ -1,7 +1,7 @@
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 49%;
     width: 50px;
     height: 50px;
     background-color: #214be4;
@@ -32,4 +32,11 @@
 .scroll-to-top:hover {
     background-color: #1e3aa8;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        right: 44%;
+    }
+
 }

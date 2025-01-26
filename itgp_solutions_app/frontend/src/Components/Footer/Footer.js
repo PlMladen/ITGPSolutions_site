@@ -1,5 +1,4 @@
 import './Footer.css';
-import facebook_logo from '../images/facebook-icon.png';
 import linkedin_logo from '../images/linkedin-icon.png';
 import instagram_logo from '../images/instagram-icon.png';
 import { useContext } from "react";
@@ -178,7 +177,7 @@ function Footer() {
                         <div className="footer-nav">
                             <ul>
                                 <li>
-                                    <Link to="/about_us">
+                                    <Link to="/AboutUs">
                                         {language === "serbian" ? "O nama" :
                                          language === "english" ? "About us" : 
                                                                   "Über uns"}
@@ -201,8 +200,8 @@ function Footer() {
                                 <li>
                                     <button 
                                         className="btn-link" 
-                                        onClick={() => setShowPrivacyModal(true)}
-                                        style={{ background: "none", border: "none", cursor: "pointer", padding: "0", color: "inherit" }}>
+                                        onClick={() => {setShowPrivacyModal(true); document.body.classList.toggle('no-scroll');}}
+                                        style={{ background: "none", border: "none", cursor: "pointer", padding: "0", color: "inherit", fontWeight: "bold", textDecoration: "none" }}>
                                         {language === "serbian" ? "Politika privatnosti" :
                                          language === "english" ? "Privacy Policy" : 
                                                                   "Datenschutzerklärung"}
@@ -218,8 +217,8 @@ function Footer() {
                                                       "© 2025 ITGP Solutions. Alle Rechte vorbehalten."}
                         </p>
                         <div className="social-icons">
-                            <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
-                            <a href="#" title="Instagram"><img src={instagram_logo} alt="Instagram" /></a>
+                            <a href="https://www.linkedin.com/company/itgp-solutions" title="LinkedIn" target="_blank" rel="noopener noreferrer"><img src={linkedin_logo} alt="LinkedIn" /></a>
+                            <a href="https://www.instagram.com/itgpsolutions" title="Instagram" target="_blank" rel="noopener noreferrer"><img src={instagram_logo} alt="Instagram" /></a>
                         </div>
                     </div>
                 </div>
@@ -235,13 +234,13 @@ function Footer() {
                                      language === "english" ? "Privacy Policy" : 
                                                               "Datenschutzerklärung"}
                                 </h5>
-                                <button type="button" className="btn-close" onClick={() => setShowPrivacyModal(false)}></button>
+                                <button type="button" className="btn-close" onClick={() => {setShowPrivacyModal(false); document.body.classList.remove('no-scroll');}}></button>
                             </div>
                             <div className="modal-body">
                                 <div dangerouslySetInnerHTML={{ __html: policies[language] }} />
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" onClick={() => setShowPrivacyModal(false)}>
+                                <button type="button" className="btn btn-secondary" onClick={() => {setShowPrivacyModal(false); document.body.classList.remove('no-scroll');}}>
                                     {language === "serbian" ? "Zatvori" : 
                                      language === "english" ? "Close" : 
                                                               "Schließen"}

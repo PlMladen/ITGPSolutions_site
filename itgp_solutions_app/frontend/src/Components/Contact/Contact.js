@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import GlowFilter from '../GlowFilter/GlowFilter';
 import { LanguageContext } from '../LanguageContext';
 import "./Contact.css";
@@ -12,8 +12,6 @@ export default function Contact() {
     const [company, setCompany] = useState('');
     const [city, setCity] = useState('');
     const [message, setMessage] = useState('');
-    const [status, setStatus] = useState('');
-    
 
     const handleSubmit = async (event) => {
         event.preventDefault();

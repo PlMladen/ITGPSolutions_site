@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import { LanguageProvider } from './Components/LanguageContext';
 import Contact from './Components/Contact/Contact';
 import Welcome from './Components/Welcome/Welcome';
-import About_us from './Components/About_us/About_us';
+import AboutUs from './Components/AboutUs/AboutUs';
 import Services from './Components/Services/Services';
 import Procedure from './Components/Procedure/Procedure';
 import PrivacyBanner from './Components/Banner/PrivacyBanner';
@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const ScrollToSection = () => {
@@ -48,7 +48,7 @@ function App() {
           <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <main>
             <section id="welcome"><Welcome /></section>
-            <section id="about_us"><About_us /></section>
+            <section id="About-Us"><AboutUs /></section>
             <section id="services"><Services /></section>
             <section id="procedure"><Procedure /></section>
             <section id="contact"><Contact /></section>

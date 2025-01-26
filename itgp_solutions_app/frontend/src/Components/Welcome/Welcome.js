@@ -33,7 +33,7 @@ export default function Welcome() {
         "for (let i = 0; i < 100; i++) {",
         "    processData(i);",
         "    setTimeout(() => {",
-        "        console.log(`O########################################### #${i}...`);",
+        "        console.log(O########################################### #{i}...);",
         "    }, Math.random() * 1000);",
         "}",
         "setInterval(() => {",
@@ -206,7 +206,7 @@ export default function Welcome() {
                 {isTypingCompleted && isCursorVisible && (
                     language === "serbian" ? (
                         <rect
-                        x={isSmallScreen ? cursorPosition - 515 : cursorPosition}
+                        x={isSmallScreen ? cursorPosition - 510 : cursorPosition}
                         y={isSmallScreen ? 545 : 441}
                         width={isSmallScreen ? "8" : "3"}
                         height={isSmallScreen ? "60" : "30"}
