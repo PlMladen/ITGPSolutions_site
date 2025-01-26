@@ -218,8 +218,8 @@ function Footer() {
                                                       "© 2025 ITGP Solutions. Alle Rechte vorbehalten."}
                         </p>
                         <div className="social-icons">
-                            <a href="#" title="LinkedIn"><img src={linkedin_logo} alt="LinkedIn" /></a>
-                            <a href="#" title="Instagram"><img src={instagram_logo} alt="Instagram" /></a>
+                            <a href="https://www.linkedin.com/company/itgp-solutions" title="LinkedIn" target="_blank" rel="noopener noreferrer"><img src={linkedin_logo} alt="LinkedIn" /></a>
+                            <a href="https://www.instagram.com/itgpsolutions" title="Instagram" target="_blank" rel="noopener noreferrer"><img src={instagram_logo} alt="Instagram" /></a>
                         </div>
                     </div>
                 </div>
