@@ -201,8 +201,8 @@ function Footer() {
                                 <li>
                                     <button 
                                         className="btn-link" 
-                                        onClick={() => setShowPrivacyModal(true)}
-                                        style={{ background: "none", border: "none", cursor: "pointer", padding: "0", color: "inherit" }}>
+                                        onClick={() => {setShowPrivacyModal(true); document.body.classList.toggle('no-scroll');}}
+                                        style={{ background: "none", border: "none", cursor: "pointer", padding: "0", color: "inherit", fontWeight: "bold", textDecoration: "none" }}>
                                         {language === "serbian" ? "Politika privatnosti" :
                                          language === "english" ? "Privacy Policy" : 
                                                                   "Datenschutzerklärung"}
@@ -235,13 +235,13 @@ function Footer() {
                                      language === "english" ? "Privacy Policy" : 
                                                               "Datenschutzerklärung"}
                                 </h5>
-                                <button type="button" className="btn-close" onClick={() => setShowPrivacyModal(false)}></button>
+                                <button type="button" className="btn-close" onClick={() => {setShowPrivacyModal(false); document.body.classList.remove('no-scroll');}}></button>
                             </div>
                             <div className="modal-body">
                                 <div dangerouslySetInnerHTML={{ __html: policies[language] }} />
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" onClick={() => setShowPrivacyModal(false)}>
+                                <button type="button" className="btn btn-secondary" onClick={() => {setShowPrivacyModal(false); document.body.classList.remove('no-scroll');}}>
                                     {language === "serbian" ? "Zatvori" : 
                                      language === "english" ? "Close" : 
                                                               "Schließen"}
