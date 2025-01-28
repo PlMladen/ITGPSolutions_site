@@ -9,6 +9,7 @@ import Services from './Components/Services/Services';
 import Procedure from './Components/Procedure/Procedure';
 import PrivacyBanner from './Components/Banner/PrivacyBanner';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import AnalyticsTracker from './Components/AnalyticsTracker/AnalyticsTracker';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -43,6 +44,7 @@ function App() {
     <LanguageProvider>
       <PrivacyBanner />
       <Router>
+        <AnalyticsTracker />
         <ScrollToSection />
         <div className="App" onClick={isMenuOpen ? closeMenu : null}>
           <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

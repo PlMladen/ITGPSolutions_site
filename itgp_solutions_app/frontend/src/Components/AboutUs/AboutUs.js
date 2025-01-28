@@ -11,7 +11,7 @@ export default function AboutUs() {
             <div className="about-us-content">
                 {language === "serbian" ? (
                     <>
-                        <h1 className="text-center mb-4">O Nama</h1>
+                        <h1 className="text-center mb-4">O nama</h1>
                         <p className="about-us-text">
                             Mi smo tim vizionara i stručnjaka posvećenih stvaranju inovativnih rešenja koja oblikuju budućnost.
                             Kroz saradnju i kreativnost, postavljamo nove standarde u industriji i pomažemo našim klijentima

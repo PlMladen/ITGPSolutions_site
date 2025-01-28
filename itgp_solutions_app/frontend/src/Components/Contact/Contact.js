@@ -13,6 +13,16 @@ export default function Contact() {
     const [city, setCity] = useState('');
     const [message, setMessage] = useState('');
 
+    const handleResetForm = () => {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setCompany('');
+        setCity('');
+        setMessage('');
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -27,7 +37,7 @@ export default function Contact() {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/send-email', {
+            const response = await fetch('https://itgp-solutions-backend.onrender.com/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,8 +49,9 @@ export default function Contact() {
 
             if (response.ok) {
                 alert(data.message);
+                handleResetForm();
             } else {
-                alert(`Greška: ${data.message}`);
+                alert(`Error: ${data.message}`);
             }
         } catch (error) {
             console.error('Greška prilikom slanja poruke:', error);
