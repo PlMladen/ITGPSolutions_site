@@ -224,7 +224,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <Link className="nav-link active" to="/AboutUs">About Us</Link>
+                                    <Link className="nav-link active" to="/AboutUs">About us</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
                                     <Link className="nav-link active" to="/services">Services</Link>
@@ -242,7 +242,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                                     <Link className="nav-link active" aria-current="page" to="/">Startseite</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
-                                    <Link className="nav-link active" to="/AboutUs">Über Uns</Link>
+                                    <Link className="nav-link active" to="/AboutUs">Über uns</Link>
                                 </li>
                                 <li className="nav-item custom-nav-bar-butt">
                                     <Link className="nav-link active" to="/services">Dienstleistungen</Link>
@@ -368,7 +368,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         ) : language === "english" ? (
                             <>
                                 <Link className="nav-link" to="/" onClick={closeMenu}><li className="nav-item">Home</li></Link>
-                                <Link className="nav-link" to="/AboutUs" onClick={closeMenu}><li className="nav-item">About Us</li></Link>
+                                <Link className="nav-link" to="/AboutUs" onClick={closeMenu}><li className="nav-item">About us</li></Link>
                                 <Link className="nav-link" to="/services" onClick={closeMenu}><li className="nav-item">Services</li></Link>
                                 <Link className="nav-link" to="/procedure" onClick={closeMenu}><li className="nav-item">Development process</li></Link>
                                 <Link className="nav-link" to="/contact" onClick={closeMenu}><li className="nav-item">Contact</li></Link>
@@ -376,7 +376,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                         ) : (
                             <>
                                 <Link className="nav-link" to="/" onClick={closeMenu}><li className="nav-item">Startseite</li></Link>
-                                <Link className="nav-link" to="/AboutUs" onClick={closeMenu}><li className="nav-item">Über Uns</li></Link>
+                                <Link className="nav-link" to="/AboutUs" onClick={closeMenu}><li className="nav-item">Über uns</li></Link>
                                 <Link className="nav-link" to="/services" onClick={closeMenu}><li className="nav-item">Dienstleistungen</li></Link>
                                 <Link className="nav-link" to="/procedure" onClick={closeMenu}><li className="nav-item">Entwicklungsprozess</li></Link>
                                 <Link className="nav-link" to="/contact" onClick={closeMenu}><li className="nav-item">Kontakt</li></Link>
@@ -400,7 +400,7 @@ function NavBar({ isMenuOpen, setIsMenuOpen }) {
                             </ul>
                         ) : language === "english" ? (
                             <ul className="footer-links">
-                                <li><Link to="/AboutUs" className="footer-link">About Us</Link></li>
+                                <li><Link to="/AboutUs" className="footer-link">About us</Link></li>
                                 <li><Link to="/contact" className="footer-link">Contact</Link></li>
                                 <button 
                                     className="btn-link" 
